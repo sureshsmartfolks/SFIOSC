@@ -2,7 +2,7 @@ SFIOSC
 ======
 
 OSC_STORM Project
-1. Launch Storm.sln in STORMSFI-master
+1. Launch Storm.sln in SFIOSC-master
 2. Right Click on OSC.Services.ProjectManagement Properties, Goto Web Settings, specify IIS Express project url port number and create virtual directory.(Ex: http://localhost:50833)
 3. Right Click on ProjectManagementWeb Properties, Goto Web Settings, specify IIS Express project url port number and and create virtual directory.(Ex: http://localhost:50824)
 4. Change OSC.Services.ProjectManagementWeb Web.Config Settings. Server, Database & Username-Password Details.
