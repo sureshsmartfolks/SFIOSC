@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Product App</title>
+    
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
+    <script src="/Scripts/index.js"></script>
+    <script src="/Scripts/jsrender.js"></script>
+    <script src="/Scripts/json.js"></script>
+     
+      <script id="translatorTableRow" type="text/x-jsrender">
+         <tr id="{{>id}}" class="tooltip" title="{{>name}}">	 
+               <td align="center"><input id="chk_{{>id}}" type="checkbox" /></td>                                                   
+                <td align="left">{{>name}}</td>      
+                <td align="left">{{>language}}</td>  
+                <td align="left">{{>phone}}</td>  
+                <td align="left">{{>email}}</td>  
+                                                   
+              
+		</tr>
+    </script>
+</head>
+<body>
+
+    
+    <div id="divDisplay" class="divActionResult">
+    <table id="tbDisplayTranslator" cellpadding="2px" rules="all" border="1" style="border-collapse: collapse; width:100%;">
+    <tr>
+        <th></th>
+        <th>Name</th>
+        <th>Language</th>
+        <th>Phone</th>
+        <th>Email</th>
+        
+    </tr>
+        <tbody id="tbTranslator">                           
+        </tbody>
+    </table>
+    </div>
+
+</body>
+</html>

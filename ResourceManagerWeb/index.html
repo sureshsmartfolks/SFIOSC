@@ -1,0 +1,178 @@
+﻿
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Resource Manager</title>
+
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>    
+    <script src="/Scripts/jsrender.js"></script>
+    <script src="/Scripts/json.js"></script>
+     
+    <link rel="stylesheet" type="text/css" href="Styles/default.css" />
+    <link rel="stylesheet" type="text/css" href="Styles/Site.css" />
+    <link rel="stylesheet" href="Styles/style.css" type="text/css" media="screen, projection"/>
+    <script type="text/javascript" src="Scripts/jquerydialog.js"></script>   
+    <script type="text/javascript" src="Scripts/jsrender.js"></script>    
+    <script type="text/javascript" src="Scripts/json.js"></script>        
+    <script type="text/javascript" src="Scripts/common.js"></script>    
+    <script type="text/javascript" src="Scripts/default.js"></script>   
+
+    
+    <script id="translatorTableRow" type="text/x-jsrender">
+         <tr id="{{>id}}" class="tooltip" title="{{>name}}">	 
+               <td align="center"><input id="chk_{{>id}}" type="checkbox" /> </td>                                                   
+             <td>
+                 <input name="btnTranslatorEdit_{{>id}}" title="Edit Translator" id="btnTranslatorEdit_{{>id}}" style="height: 24px;" onclick="return false;" type="image" alt="Edit Name" src="Images/spec-edit-icon-45.png"/>
+             </td>                         
+             <td align="left"><div id="name_{{>id}}">{{>name}}</div></td>      
+             <td align="left"><div id="language_{{>id}}">{{>language}}</div></td>     
+             <td align="left"><div id="phone_{{>id}}">{{>phone}}</div></td> 
+             <td align="left"><div id="email_{{>id}}">{{>email}}</div></td>               
+		</tr>
+    </script>
+
+    <style type="text/css">
+        #rotationName
+        {
+            width: 423px;
+            margin-left: 75px;
+        }
+        .style2
+        {
+            width: 187px;
+        }
+    </style>
+
+    <link rel="stylesheet" href="Styles/default.css" />
+
+</head>
+<body>
+        <form>
+<!--    <form id="rotationGrillEditForm" runat="server">-->
+    <div class="page">
+    <div style="background-color:White;" class="pageDivAdmin">
+
+            <div class="header">
+                <div class="header-left">
+                    <div class="logo">
+                        <a href="#"></a>
+                    </div>
+                </div>
+                <div class="header-right">
+                <div class="loginDisplay" style="right: 0px; left: 10px;">
+                    <asp:LoginView ID="LoginView1" runat="server" EnableViewState="false">
+                        <AnonymousTemplate>
+                            [ <a href="~/Login.aspx" id="HeadLoginStatus" runat="server">Log In</a>
+                            ]
+                        </AnonymousTemplate>
+                        <LoggedInTemplate>
+                            Welcome <span class="bold">
+                                <asp:LoginName ID="HeadLoginName" runat="server" />
+                            </span>! [
+                            <asp:LoginStatus ID="LoginStatus1" runat="server" LogoutAction="Redirect" LogoutText="Log Out"
+                                LogoutPageUrl="~/" />
+                            ]
+                        </LoggedInTemplate>
+                    </asp:LoginView>
+                </div>     
+                </div>
+				<div class="hideSkiplink">
+				 
+					<ul class="dropdown">
+							<li>
+							  <a href="Default.aspx">Home</a>
+										
+					</ul>    
+					<div>    
+					
+					</div>   
+				</div>
+        </div>
+        <div id="divSearch">
+                <table>
+                    <tr>
+                        <td>
+                            <div style="width:335px; height:35px; border:1px solid; border-color:Silver;">
+                            <asp:TextBox ID="txtSearchFilter"   title="Search Box" runat="server" AutoPostBack="false" Height="32px" Width="300px" style=" float:left; border:0px"/>                           
+                                                               
+                            </div>
+                        </td>
+                        <td>    
+                         <asp:ImageButton ID="btnRotationSearch" runat="server" ImageUrl="~/Images/search-icon.png"
+                                ToolTip="Spec Search" AlternateText="Spec Search" Height="35px" OnClientClick="return false;" />                      
+                        <div id="addNew"><img title="Add Translator" alt="Add Translator" src="Images/new-spec-icon.png" width="35px" border="0" height="35px" /></div>                                                    
+                        </td>
+                    </tr>
+                </table>
+       </div>
+        <div id="rightPane">
+                      
+                <br />
+                 &nbsp;
+                    <br />
+                     <asp:Label ID="lbMessage" runat="server" ForeColor="Red" />
+                            <div class="actionMenuDiv">
+                              
+				                <ul>                                                               
+                                    <li><a href="#" id="btnDelete" class="actionMenu">Delete</a></li>
+				                </ul>
+                            </div>
+                 <div id="actionMenuDiv">
+            <ul>    
+            
+                    
+                     
+            </ul>
+            </div>
+                             <div id="divDisplay" class="divActionResult">
+                    <table id="tbDisplayTranslator" cellpadding="2px" rules="all" border="1" style="border-collapse: collapse; width:100%;">
+                        <tr>
+                            <th></th>
+                            <th></th>
+                            <th>Name</th>
+                            <th>Language</th>
+                            <th>Phone</th>
+                            <th>Email</th>
+        
+                        </tr>
+                            <tbody id="tbTranslator">                           
+                            </tbody>
+                        </table>
+                            </div>
+                <br /><br />
+        </div>    
+    </div>
+        <div title="Message" id="divMessage" style="text-align:center; vertical-align:middle; display:none;">
+            <asp:Label ID="txtMessageBox" runat="server" Style="vertical-align: middle;" />
+        </div>
+        <!--dialogs-->
+        <div title="Confirmation" id="divConfirmation" style="text-align:center; display:none;">   
+            <br />         
+            <button type="button" id="btnDeleteConfirmed" style="width:80px">Delete</button> &nbsp;<button type="button" id="btnDeleteConfirmedCancel" style="width:80px">Cancel</button>            
+        </div>
+
+        <div title="Edit" id="divEditTranslator" style="text-align:center; display:none;">
+            Translator
+            
+            <table width="500px" cellspacing="5px">
+                <tr><td align="right">Name:</td><td align="left"><input type="text" id="txtEditName" size="50" /></td></tr>
+                <tr><td align="right">Language:</td><td align="left"><input type="text" id="txtEditLanguage" size="50"/></td></tr>
+                <tr><td align="right">Phone:</td><td align="left"><input type="text" id="txtEditPhone" size="50"/></td></tr>
+                <tr><td align="right">Email:</td><td align="left"><input type="text" id="txtEditEmail" size="50" /></td></tr>
+                <tr>
+                    <td align="center" colspan="2"><button type="button" id="btnSave">Save</button> &nbsp;<button type="button" id="btnEditCancel">Cancel</button></td>
+
+                </tr>
+                <tr><td><input type="hidden" id="translatorID" value="English"></td></tr>
+            </table>
+        </div>
+
+
+    </div>
+    </form>
+
+</body>
+</html>

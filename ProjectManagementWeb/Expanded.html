@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Storm</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
+
+    <script type="text/javascript" src="Scripts/jquery-1.7.2.min.js"></script>
+<!--	<script type="text/javascript" src="//code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+	<script type="text/javascript" src="Scripts/common.js"></script>
+    <script type="text/javascript" src="Scripts/Authenticate.js"></script>
+	<script type="text/javascript" src="Scripts/jquerydialog.js"></script>
+	<script type="text/javascript" src="Scripts/jquery.ui.effect.js"></script>
+	<script type="text/javascript" src="Scripts/jquery.ui.widget.js"></script>
+	<script type="text/javascript" src="Scripts/jquery.ui.position.js"></script>
+	<script type="text/javascript" src="Scripts/jsrender.js"></script>
+	<script type="text/javascript" src="Scripts/modernizr.js"></script>
+	<script type="text/javascript" src="Scripts/json.js"></script>
+	<script type="text/javascript" src="Scripts/StormPMServiceObjects.js"></script>
+    <script type="text/javascript" src="//localhost/ProjectManagement-API/api/proxies"></script>
+    <script type="text/javascript">
+
+        function getFeature(featureName) {
+            var featureHTML = "";
+            $.ajax({
+                type: "GET",
+                headers: { 'Authorization': 'Bearer ' + readCookie(authCookieName) },
+                url: MasterTemplateUrl + "/RetrieveTemplate?templateName=" + featureName,
+                async: false,
+                success: function (msg, status) { featureHTML = msg; },
+                error: function (msg, status) {
+                    displayMessage("Template Load Failed!", "Red");
+                }
+            });
+
+            return featureHTML;
+        };
+
+        checkAuth();
+
+        $(document).ready(function () {
+            $("body").append(getFeature("Index"));
+        });
+
+    </script>-->
+</head>
+
+    <body>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+
+
+<!--    <script src="default.js"></script>-->
+
+    <div class="feature" style="padding-right: 15px;">
+        <div id="gridFeatures" class="col-xs-12" style="height: 50px;">
+            <div class="col-xs-1 pull-right"></div>
+        </div>
+        <div class="container col-xs-8 CardHolder">
+            <div id="CardHolderTemplate"></div>
+
+
+        </div>
+    </div>
+
+<!--    <div title="Message" id="divMessage" style="text-align: center; vertical-align: middle; display: none;"></div>
+    <div id="divFeatureModal" style="text-align: center; vertical-align: middle; display: none;"></div>-->
+
+    <!-- JS RENDER TEMPLATES -->
+
+    <script id="ProjectCard" type="text/x-jsrender">
+
+
+        <div id="card_{{>ProjectID}}" class="panel panel-primary">
+            <div class="" style="background-color: skyblue;"><span style="margin-left: 5px; text-decoration: underline; font-size: x-large">Cloudy with a Chance of Meatballs</span></div>
+            <div class="row">
+
+                <!-- add status here -->
+                <div class="col-xs-2"><span style="margin-left: 20px; font-size: 1.5em;">PENDING</span></div>
+                <!-- add PM / client here -->
+                <div class="col-xs-4 pull-right"><span style="font-size: large;">The Monarch<br>
+                    Dr. Venture</span> </div>
+            </div>
+            <div class="row">
+                <!-- add Cost here -->
+                <div id="cost" class="col-xs-4 pull-right">
+                    <h3>$TE,HCO.ST</h3>
+                </div>
+            </div>
+            <div class="row">
+                <!-- add #docs and #recs (approved) tag here -->
+                <div style="font-size: larger;" class="label label-primary col-xs-offset-1 col-xs-4">Documents   <span class="badge">1222</span></div>
+                <div style="font-size: larger;" class="label label-primary col-xs-offset-2 col-xs-4">Resources   <span class="badge">1222 / 7</span></div>
+            </div>
+
+        </div>
+
+    </script>
+
+<!--<script>
+
+    toSee = $('#ProjectCard').render(results);
+    //var headers = $('#CardTableHeader').render();
+    $('#CardHolderTemplate').html("");
+    //$('#tbTemplate').append(headers);
+    $('#CardHolderTemplate').append(toSee);
+
+</script>-->
+
+
+</body>
+</html>

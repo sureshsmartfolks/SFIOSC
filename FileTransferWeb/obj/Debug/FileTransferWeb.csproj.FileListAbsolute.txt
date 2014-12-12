@@ -1,0 +1,12 @@
+D:\STORMSFI-master\FileTransferWeb\bin\OSC.FileTransfer.Web.dll.config
+D:\STORMSFI-master\FileTransferWeb\bin\OSC.FileTransfer.Web.dll
+D:\STORMSFI-master\FileTransferWeb\bin\OSC.FileTransfer.Web.pdb
+D:\STORMSFI-master\FileTransferWeb\obj\Debug\OSC.FileTransfer.Web.dll
+D:\STORMSFI-master\FileTransferWeb\obj\Debug\OSC.FileTransfer.Web.pdb
+D:\STORMSFI-master\FileTransferWeb\obj\Debug\FileTransferWeb.csprojResolveAssemblyReference.cache
+D:\Prabhakaran\Backup code\dec12\STORMSFI-master\FileTransferWeb\bin\OSC.FileTransfer.Web.dll.config
+D:\Prabhakaran\Backup code\dec12\STORMSFI-master\FileTransferWeb\bin\OSC.FileTransfer.Web.dll
+D:\Prabhakaran\Backup code\dec12\STORMSFI-master\FileTransferWeb\bin\OSC.FileTransfer.Web.pdb
+D:\Prabhakaran\Backup code\dec12\STORMSFI-master\FileTransferWeb\obj\Debug\FileTransferWeb.csprojResolveAssemblyReference.cache
+D:\Prabhakaran\Backup code\dec12\STORMSFI-master\FileTransferWeb\obj\Debug\OSC.FileTransfer.Web.dll
+D:\Prabhakaran\Backup code\dec12\STORMSFI-master\FileTransferWeb\obj\Debug\OSC.FileTransfer.Web.pdb

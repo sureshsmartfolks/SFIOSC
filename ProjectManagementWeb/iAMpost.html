@@ -1,0 +1,399 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Randomanity</title>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"> </script>
+    
+</head>
+<body>
+    <input id="id" type="text" />
+    <input id="name" type="text" />
+    <input id="value" type="text" />
+    <input id="something" type="text" />
+    <input id="btnGet" type="button" value="POSTY static DATA" />
+
+    <br /><BR/>
+
+    Project<input id="projectID" type="text" value="157"/><input id="projectName" type="text" /> <br/> <br />
+
+    Clients <br/>
+
+    <input id="clientName" type="text" /> <br />
+    <input id="clientEmail" type="text" /> <br />
+    <input id="clientPhone" type="text" /> <br /> <br />
+    
+    <div id="documents">
+    Documents <br/>
+    </div>
+
+    <div id="resources">
+    Resources <br/>
+    </div>
+
+    Resources <br/>
+    <input id="Text1" type="text" />
+    <input id="Text5" type="text" />
+    <input id="Text6" type="text" /> <br />
+
+    <input id="getIT" type="button" value="GET DATA" />
+    <input id="editIT" type="button" value="EDIT DATA" />
+    <input id="DELETED" type="button" value="DELETE PROJECT DATA" />
+
+</body>
+    <script type="text/javascript" src="businessObjects.js"></script>
+    <script type="text/javascript" >
+  
+
+        $(document).ready(function () {
+            pDTO = ProjectManagementRequest();
+
+            $('#btnGet').on('click', newData);
+            $('#getIT').on('click', getData);
+            $('#editIT').on('click', editData);
+
+        });
+
+        function toggleDisabled() {
+            if (this.disabled)
+                this.disabled = false;
+            this.disabled = true;
+        }
+
+
+        function newData() {
+            var ben = ProjectManagementRequest();
+
+            //ben.projects.add(ProjectDTO());
+
+            //ben.projects[0] = ProjectDTO();
+
+            ben.projects[0].documents[ben.projects[0].documents.length] = DocumentDTO();
+            ben.projects[0].documents[0].name = "DOC1";
+            ben.projects[0].documents[0].filePath = "x:\\sick.jpg";
+            ben.projects[0].documents[0].status = 1;
+            ben.projects[0].documents[0].sourceLanguageID = 1;
+            ben.projects[0].documents[0].translateDirections = LanguageDTO();
+            ben.projects[0].documents[0].translateDirections.translateDirectionID[0] = 3;
+            ben.projects[0].documents[0].translateDirections.translateDirectionID[1] = 2;
+            ben.projects[0].documents[0].typeID = "JPG";
+
+            ben.projects[0].documents[ben.projects[0].documents.length] = DocumentDTO();
+            ben.projects[0].documents[1].name = "DOC2";
+            ben.projects[0].documents[1].filePath = "x:\\wuuuhhaaa!!?!?.jpg";
+            ben.projects[0].documents[1].status = 0;
+
+            ben.projects[0].client.name = "MOgul";
+            ben.projects[0].client.email = "m@M.com";
+            ben.projects[0].client.phoneNumber = "2013121448";
+            //ben.projects[0].client.ID = "2";
+            ben.projects[0].projectName = "What Timex?";
+
+            // RESOURCES
+            ben.projects[0].resources[ben.projects[0].resources.length] = ResourceDTO();
+            ben.projects[0].resources[0].firstName = "Don";
+            ben.projects[0].resources[0].lastName = "Matroska";
+            ben.projects[0].resources[0].company = "OSC";
+            ben.projects[0].resources[0].address = "100 disney drive";
+            ben.projects[0].resources[0].type = "0";
+            ben.projects[0].resources[0].isCompany = false;
+            ben.projects[0].resources[0].languageAssociations = LanguageDTO();
+            ben.projects[0].resources[0].languageAssociations.translateDirectionID[0] = 1;
+            ben.projects[0].resources[0].languageAssociations.translateDirectionID[1] = 3;
+            ben.projects[0].resources[0].languageAssociations.translateDirectionID[2] = 6;
+
+            ben.projects[0].resources[ben.projects[0].resources.length] = ResourceDTO();
+            ben.projects[0].resources[1].firstName = "Ben";
+            ben.projects[0].resources[1].lastName = "Spiderbot";
+            ben.projects[0].resources[1].company = "Sealab";
+            ben.projects[0].resources[1].address = "1 Underwater Way";
+            ben.projects[0].resources[1].type = "1";
+            ben.projects[0].resources[1].isCompany = false;
+            ben.projects[0].resources[1].languageAssociations = LanguageDTO();
+            ben.projects[0].resources[1].languageAssociations.translateDirectionID[0] = 2;
+            ben.projects[0].resources[1].languageAssociations.translateDirectionID[1] = 4;
+            ben.projects[0].resources[1].languageAssociations.translateDirectionID[2] = 9;
+
+
+            //INVOICES
+            ben.projects[0].invoices[ben.projects[0].invoices.length] = InvoiceDTO();
+            ben.projects[0].invoices[0].price = 0.50;
+            ben.projects[0].invoices[0].status = 1;
+            ben.projects[0].invoices[0].version = 1.00;
+            ben.projects[0].invoices[0].documentID = 344;
+
+            ben.projects[0].invoices[ben.projects[0].invoices.length] = InvoiceDTO();
+            ben.projects[0].invoices[1].price = 26.00;
+            ben.projects[0].invoices[1].status = 0;
+            ben.projects[0].invoices[1].version = 3.141569;
+            ben.projects[0].invoices[1].documentID = 321;
+
+            //ben.errors = "bad";
+            ben.status = "good?";
+
+
+            $.ajax({
+                type: "POST",
+                url: "//localhost/ProjectManagement-API/api/projectmanagement/postProject/",
+                data: JSON.stringify(ben),
+
+                contentType: "application/json;charset=utf-8",
+
+                success: newSuccess,
+                error: newError
+            });
+            //$.post("http://api.jquery.com/jquery.post/",
+
+
+
+        }
+
+        function editData() {
+//            pDTO = ProjectManagementRequest();
+            //pDTO.projects[0] = ProjectDTO();
+            pDTO.projects[0].projectName = $('#projectName').val();
+
+            //pDTO.projects[0].client
+            pDTO.projects[0].client.name = $('#clientName').val();
+            pDTO.projects[0].client.phoneNumber = $('#clientPhone').val();
+            pDTO.projects[0].client.email = $('#clientEmail').val();
+
+            //remove new deleted docs
+            //for
+            //if (pDTO.projects[0].documents[x].name == "0" && pDTO.projects[0].documents[x].DocumentID == 0)
+            //    pDTO.projects[0].documents.splice(x, 1);
+
+            for (var x = 0; x < pDTO.projects[0].documents.length; x++) {
+                var tag = "#doc_" + x;
+                pDTO.projects[0].documents[x].name = $(tag + "_name").val();
+                pDTO.projects[0].documents[x].status = $(tag + "_status").val();
+                pDTO.projects[0].documents[x].typeID = $(tag + "_typeID").val();
+            }
+            //projectname
+            //clientName
+            //clientEmail
+            //clientPhone
+            //DOCS
+            //urlCall = "//localhost/ProjectManagement-API/api/projectmanagement/postProject";
+            $.ajax({
+                type: "POST",
+                url: "//localhost/ProjectManagement-API/api/projectmanagement/postProject/",
+                data: JSON.stringify(pDTO),
+                contentType: "application/json;charset=UTF-8",
+                success: editSuccess,
+                error: editError
+
+            }); 
+            //RECS
+        }
+
+        function getData() {
+            urlCall = "//localhost/ProjectManagement-API/api/projectmanagement/getProject/" + $('#projectID').val();
+            $.ajax({
+                type: "GET",
+                url: urlCall,
+                data: "",
+                contentType: "application/json;charset=UTF-8",
+                success: getSuccess,
+                error: getError
+
+            })
+            //document.getElementById('projectID').disabled = true;
+            document.getElementById("projectID").disabled = true;
+        }
+
+        function addRes() {
+            //save values
+            xx = pDTO.projects[0].resources.length - 1;
+
+            pDTO.projects[0].resources[++xx] = ResourceDTO();
+
+            var tag = "#res_NEW" + xx;
+            pDTO.projects[0].resources[xx].firstName = $(tag + "_firstName").val();
+            pDTO.projects[0].resources[xx].lastName = $(tag + "_lastName").val();
+            pDTO.projects[0].resources[xx].type = $(tag + "_type").val();
+            //pDTO.projects[0].resources[xx].filePath = "TEST://" + new Date().getTime();
+
+
+            for (var x = 0; x < pDTO.projects[0].resources.length - 1; x++) {
+                var tag = "#res_" + x;
+                pDTO.projects[0].resources[x].firstName = $(tag + "_firstName").val();
+                pDTO.projects[0].resources[x].lastName = $(tag + "_lastName").val();
+                pDTO.projects[0].resources[x].type = $(tag + "_type").val();
+            }
+
+            //relist
+            listResources();
+        }
+
+        function deleteRes() {
+            thisRes = this.id.split("_")[1]
+            if (pDTO.projects[0].resources[thisRes].resourceID)
+                pDTO.projects[0].resources[thisRes].firstName = "0";
+            else
+                pDTO.projects[0].resources.splice(thisRes, 1);
+
+            listResources();
+        }
+
+        function addDoc() {
+            //save values
+            xx = pDTO.projects[0].documents.length - 1;
+
+            pDTO.projects[0].documents[++xx] = DocumentDTO();
+
+            var tag = "#doc_NEW" + xx;
+            pDTO.projects[0].documents[xx].firstName = $(tag + "_firestName").val();
+            pDTO.projects[0].documents[xx].lastName = $(tag + "_lastName").val();
+            pDTO.projects[0].documents[xx].type = $(tag + "_type").val();
+            //pDTO.projects[0].documents[xx].filePath = "TEST://" + new Date().getTime();
+
+
+            for (var x = 0; x < pDTO.projects[0].documents.length-1; x++) {
+                var tag = "#doc_" + x;
+                pDTO.projects[0].documents[x].firstName = $(tag + "_firstName").val();
+                pDTO.projects[0].documents[x].lastName = $(tag + "_lastName").val();
+                pDTO.projects[0].documents[x].type = $(tag + "_type").val();
+            }
+
+            //relist
+            listDocuments();
+            //listResources();
+
+        }
+
+        function listDocuments() {
+            var exHTML = "Documents<br/>";
+
+            for (var x = 0; x < pDTO.projects[0].documents.length; x++) {
+                var isDeleted = pDTO.projects[0].documents[x].name == "0";
+                if (pDTO.projects[0].documentID = 0)
+                    var tag = "doc_NEW" + x;
+                else
+                    var tag = "doc_" + x;
+                if (isDeleted)
+                    exHTML += "DEL";
+                else
+                    exHTML += pDTO.projects[0].documents[x].documentID;
+
+                exHTML += " <input id=\"" + tag + "_name" + "\" type=\"text\" value=\"" + pDTO.projects[0].documents[x].name + "\" />\n"
+                exHTML += " <input id=\"" + tag + "_status" + "\" type=\"text\" value=\"" + pDTO.projects[0].documents[x].status + "\" />\n"
+                exHTML += " <input id=\"" + tag + "_typeID" + "\" type=\"text\" value=\"" + pDTO.projects[0].documents[x].typeID + "\" />\n"
+
+                if (!isDeleted)
+                    exHTML += " <input id=\"doc_" + x + "_DEL\" type=\"button\" value=\"Delete #" + pDTO.projects[0].documents[x].documentID + "\" />"
+                //exHTML += " <input id\"doc_" + pDTO.projects[0].documents[x].documentID + "\" type=\"button\" value=\"Delete\" />"
+                exHTML += "<br />";
+                //   $(tag).val(pDTO.projects[0].documents[x].name);
+
+            }
+            tag = "doc_NEW" + pDTO.projects[0].documents.length;
+            exHTML += "new  <input id=\"" + tag + "_name" + "\" type=\"text\" value=\"[name]\" />\n"
+            exHTML += " <input id=\"" + tag + "_status" + "\" type=\"text\" value=\"[status]\" />\n"
+            exHTML += " <input id=\"" + tag + "_typeID" + "\" type=\"text\" value=\"[type]\" />\n"
+            exHTML += "<input id=\"addDoc\" type=\"button\" value=\"Add Document\" /><br /><br />";
+
+
+            $('#documents').html(exHTML);
+
+            $('#addDoc').on('click', addDoc);
+            for (var x = 0; x < pDTO.projects[0].documents.length; x++) {
+                tag = "#doc_" + x + "_DEL";
+                $(tag).on('click', deleteDoc);
+            }
+
+            //$('#deleteDoc').on('click', deleteDoc);
+        }
+
+        function listResources() {
+            var exHTML = "Resources<br/>";
+
+            for (var x = 0; x < pDTO.projects[0].resources.length; x++) {
+                var isDeleted = pDTO.projects[0].resources[x].firstName == "0";
+                if (pDTO.projects[0].resourceID = 0)
+                    var tag = "res_NEW" + x;
+                else
+                    var tag = "res_" + x;
+                if (isDeleted)
+                    exHTML += "DEL";
+                else
+                    exHTML += pDTO.projects[0].resources[x].resourceID;
+
+                exHTML += " <input id=\"" + tag + "_firstName" + "\" type=\"text\" value=\"" + pDTO.projects[0].resources[x].firstName + "\" />\n"
+                exHTML += " <input id=\"" + tag + "_lastName" + "\" type=\"text\" value=\"" + pDTO.projects[0].resources[x].lastName + "\" />\n"
+                exHTML += " <input id=\"" + tag + "_type" + "\" type=\"text\" value=\"" + pDTO.projects[0].resources[x].type + "\" />\n"
+
+                if (!isDeleted)
+                    exHTML += " <input id=\"res_" + x + "_DEL\" type=\"button\" value=\"Delete #" + pDTO.projects[0].resources[x].resourceID + "\" />"
+                //exHTML += " <input id\"res_" + pDTO.projects[0].resources[x].resourceID + "\" type=\"button\" value=\"Delete\" />"
+                exHTML += "<br />";
+                //   $(tag).val(pDTO.projects[0].resources[x].firstName);
+
+            }
+            tag = "res_NEW" + pDTO.projects[0].resources.length;
+            exHTML += "new  <input id=\"" + tag + "_firstName" + "\" type=\"text\" value=\"[firstName]\" />\n"
+            exHTML += " <input id=\"" + tag + "_lastName" + "\" type=\"text\" value=\"[lastName]\" />\n"
+            exHTML += " <input id=\"" + tag + "_type" + "\" type=\"text\" value=\"[type]\" />\n"
+            exHTML += "<input id=\"addRes\" type=\"button\" value=\"Add Resource\" /><br /><br />";
+
+
+            $('#resources').html(exHTML);
+
+            $('#addRes').on('click', addRes);
+            for (var x = 0; x < pDTO.projects[0].resources.length; x++) {
+                tag = "#res_" + x + "_DEL";
+                $(tag).on('click', deleteRes);
+            }
+
+            //$('#deleteres').on('click', deleteres);
+        }
+
+
+        function deleteDoc() {
+            thisDoc = this.id.split("_")[1]
+            if (pDTO.projects[0].documents[thisDoc].documentID)
+                pDTO.projects[0].documents[thisDoc].name = "0";
+            else
+                pDTO.projects[0].documents.splice(thisDoc, 1);
+
+            listDocuments();
+        }
+        
+        function getSuccess(msg, status, err) {
+            //alert("Client ID: " + msg.status);
+
+            pDTO = msg;
+
+            $('#projectID').val(pDTO.projects[0].projectID);
+            $('#projectName').val(pDTO.projects[0].projectName);
+            $('#clientName').val(pDTO.projects[0].client.name);
+            $('#clientEmail').val(pDTO.projects[0].client.email);
+            $('#clientPhone').val(pDTO.projects[0].client.phoneNumber);
+
+
+
+            listDocuments();
+            listResources();
+        }
+
+        function newError(msg, status, err) {
+            alert(msg.status);
+        }
+        function newSuccess(msg, status, err) {
+            alert(msg.status);
+        }
+
+        function editSuccess(msg, status, err) {
+            alert(msg.status);
+        }
+
+        function editError(msg, status, err) {
+            alert(msg.status);
+        }
+        function getError(msg, status, err) {
+            alert(msg.status);
+        }
+
+
+
+    </script>
+</html>

@@ -1,0 +1,96 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OSC.Services.ProjectManagement", "OSC.Services.ProjectManagement\OSC.Services.ProjectManagement.csproj", "{CD061EA8-1BC5-4E00-B61E-7ABCF34E2273}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectManagementWeb", "ProjectManagementWeb\ProjectManagementWeb.csproj", "{4FD97D72-4922-4681-8040-C2C33F9A2595}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResourceManagerWeb", "ResourceManagerWeb\ResourceManagerWeb.csproj", "{CA4BC7C5-A92E-4137-86A4-CE65CB4D5AA3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OSC.Services.Storm.Templates", "OSC.Services.Storm.Templates\OSC.Services.Storm.Templates.csproj", "{E4303F88-E3DD-4873-BE5A-87D48C980A8F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OCS.HelperObjects.FileTransfer", "OCS.HelperObjects.FileTransfer\OCS.HelperObjects.FileTransfer.csproj", "{7AD5D50B-2CE7-4E0A-9A0A-5D47B2572945}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OSC.BusinessObjects.FileTransfer", "OSC.BusinessObjects.FileTransfer\OSC.BusinessObjects.FileTransfer.csproj", "{35DCBFA4-84B2-4A31-9969-08B74FE68185}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileTransferWeb", "FileTransferWeb\FileTransferWeb.csproj", "{DFFFF621-53E1-4431-8636-07D623C11579}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OSC.Services.FileTransfer", "OSC.Services.FileTransfer\OSC.Services.FileTransfer.csproj", "{61961BA9-FA84-4B50-AAFD-5B3CFA087ECD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OSC.Services.Trados", "OSC.Services.Trados\OSC.Services.Trados\OSC.Services.Trados.csproj", "{C6798F81-0E2C-40D2-9571-C0AEDAB9AFD6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OSC.ProjectManagement.BusinessObjects", "OSC.ProjectManagement.BusinessObjects\OSC.ProjectManagement.BusinessObjects.csproj", "{82581655-0EF6-4746-9599-209670AD0DF3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{44C527CC-CA4C-4CC2-9685-DBADFCB60480}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{D5A25C57-A2A5-4A22-B425-986187B33E8E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{EBF4CD75-6ACC-4D4C-9739-73C07722E7D6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BusinessObjects", "BusinessObjects", "{5458050A-E4FB-461E-97B8-B332A61C3041}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CD061EA8-1BC5-4E00-B61E-7ABCF34E2273}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD061EA8-1BC5-4E00-B61E-7ABCF34E2273}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD061EA8-1BC5-4E00-B61E-7ABCF34E2273}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD061EA8-1BC5-4E00-B61E-7ABCF34E2273}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FD97D72-4922-4681-8040-C2C33F9A2595}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FD97D72-4922-4681-8040-C2C33F9A2595}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FD97D72-4922-4681-8040-C2C33F9A2595}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FD97D72-4922-4681-8040-C2C33F9A2595}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA4BC7C5-A92E-4137-86A4-CE65CB4D5AA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA4BC7C5-A92E-4137-86A4-CE65CB4D5AA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA4BC7C5-A92E-4137-86A4-CE65CB4D5AA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4303F88-E3DD-4873-BE5A-87D48C980A8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4303F88-E3DD-4873-BE5A-87D48C980A8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4303F88-E3DD-4873-BE5A-87D48C980A8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4303F88-E3DD-4873-BE5A-87D48C980A8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AD5D50B-2CE7-4E0A-9A0A-5D47B2572945}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AD5D50B-2CE7-4E0A-9A0A-5D47B2572945}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AD5D50B-2CE7-4E0A-9A0A-5D47B2572945}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35DCBFA4-84B2-4A31-9969-08B74FE68185}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35DCBFA4-84B2-4A31-9969-08B74FE68185}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35DCBFA4-84B2-4A31-9969-08B74FE68185}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFFFF621-53E1-4431-8636-07D623C11579}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFFFF621-53E1-4431-8636-07D623C11579}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFFFF621-53E1-4431-8636-07D623C11579}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFFFF621-53E1-4431-8636-07D623C11579}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61961BA9-FA84-4B50-AAFD-5B3CFA087ECD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61961BA9-FA84-4B50-AAFD-5B3CFA087ECD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61961BA9-FA84-4B50-AAFD-5B3CFA087ECD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6798F81-0E2C-40D2-9571-C0AEDAB9AFD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6798F81-0E2C-40D2-9571-C0AEDAB9AFD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6798F81-0E2C-40D2-9571-C0AEDAB9AFD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82581655-0EF6-4746-9599-209670AD0DF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82581655-0EF6-4746-9599-209670AD0DF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82581655-0EF6-4746-9599-209670AD0DF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82581655-0EF6-4746-9599-209670AD0DF3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CD061EA8-1BC5-4E00-B61E-7ABCF34E2273} = {D5A25C57-A2A5-4A22-B425-986187B33E8E}
+		{4FD97D72-4922-4681-8040-C2C33F9A2595} = {EBF4CD75-6ACC-4D4C-9739-73C07722E7D6}
+		{CA4BC7C5-A92E-4137-86A4-CE65CB4D5AA3} = {EBF4CD75-6ACC-4D4C-9739-73C07722E7D6}
+		{E4303F88-E3DD-4873-BE5A-87D48C980A8F} = {D5A25C57-A2A5-4A22-B425-986187B33E8E}
+		{7AD5D50B-2CE7-4E0A-9A0A-5D47B2572945} = {5458050A-E4FB-461E-97B8-B332A61C3041}
+		{35DCBFA4-84B2-4A31-9969-08B74FE68185} = {5458050A-E4FB-461E-97B8-B332A61C3041}
+		{DFFFF621-53E1-4431-8636-07D623C11579} = {EBF4CD75-6ACC-4D4C-9739-73C07722E7D6}
+		{61961BA9-FA84-4B50-AAFD-5B3CFA087ECD} = {D5A25C57-A2A5-4A22-B425-986187B33E8E}
+		{C6798F81-0E2C-40D2-9571-C0AEDAB9AFD6} = {D5A25C57-A2A5-4A22-B425-986187B33E8E}
+		{82581655-0EF6-4746-9599-209670AD0DF3} = {5458050A-E4FB-461E-97B8-B332A61C3041}
+	EndGlobalSection
+EndGlobal

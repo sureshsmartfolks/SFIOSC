@@ -1,0 +1,2 @@
+﻿D:\STORMSFI-master\OSC.Services.ProjectManagement\OSC.Services.ProjectManagement.csproj : error  : The Web Application Project OSC.Services.ProjectManagement is configured to use IIS.  Could not find the server 'https://localhost/' on the local machine. Make sure the local IIS server has been configured to support secure communications.
+

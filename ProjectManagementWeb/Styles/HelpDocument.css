@@ -1,0 +1,105 @@
+﻿#divSide {
+width: 20%;
+vertical-align: top;
+display: inline-block;
+}
+
+#divMain {
+border: 0px solid black;
+display: inline-block;
+width: 79%;
+height:700px;
+overflow-x:scroll;
+}
+
+div.menu ul > :first-child {
+    background-color: #465C71;
+    color: #dde4ec;
+}
+
+div.menu ul li a, div.menu ul li a:visited {
+    padding:4px 4px;
+}
+div.menu ul li ul li ul li a, div.menu ul li ul li ul li a:visited {
+    padding-left:13px;
+}
+        .title {
+            color: #365F91;
+            font-weight: bold;
+            font-size: 21px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            font-family: Helvetica, Sans-Serif;
+        }
+         .subtitle {
+            color: #4F81BD;
+            font-weight: bold;
+            font-size: 21px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            font-family: Helvetica, Sans-Serif;
+        }
+        .menu {
+            float: left;
+            width:200px;
+        }
+
+            .menu ul {
+                list-style: none;
+                padding: 5px;
+            }
+        .menuHeader {
+              color: #365F91;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .content {
+            border-left: 1px solid #000000;
+            display: inline-block;
+            padding-left: 10px;
+        }
+        p {
+            font: 14px Helvetica, Sans-Serif;
+            width:870px;
+            margin-left:15px;
+        }
+        .p1 {
+            margin-left: 35px;
+            margin-top: 8px;
+            font: 14px Helvetica, Sans-Serif;
+            width:825px;
+            display: inline-block;
+        }
+
+    ol {
+       list-style-type: lower-roman;
+       margin-left: 25px;
+       font: 14px Helvetica, Sans-Serif;
+    }
+    ol li {
+        margin-left: 25px;
+    }
+
+    ol.disc {
+         list-style-type:disc;
+    }
+        ol.disc li {
+            margin-left:25px;
+        }
+    ol.none {
+        list-style-type:none;
+    }
+        ol.none li {
+            padding-bottom:7px;
+            margin-left:25px;
+        }
+div.largeImg {
+    width:850px;
+}
+div.smallImg {
+    width:500px;
+}
+div img {
+    max-width:100%;
+    max-height:100%;
+}

@@ -1,0 +1,209 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>STORM: Project Management Portal</title>
+
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <script type="text/javascript" src="Scripts/jsrender.js"></script>
+    <script type="text/javascript" src="Scripts/json.js"></script>
+    <script type="text/javascript" src="Scripts/StormPMServiceObjects.js"></script>
+    <!--<script type="text/javascript" src="//localhost/api/proxies"></script>-->
+
+    <script src="businessObjects.js"></script>
+</head>
+<body>
+    <style>
+            body {
+                /*font-size: 1.2em;*/
+                color: green;
+            }
+            /* default CSS */
+
+            div.hideSkiplink {
+                background-color: #00641E;
+                padding-left: 0;
+                padding-right: 0;
+                height: 30px;
+                z-index: 999;
+            }
+
+                div.hideSkiplink ul {
+                    padding-left: 0px;
+                }
+
+            a {
+                text-decoration: none;
+            }
+
+            ul {
+                list-style: none;
+            }
+
+            p {
+                margin: 15px 0;
+            }
+
+            /*
+            LEVEL ONE
+        */
+            ul.dropdown {
+                position: relative;
+            }
+                /*ul.dropdown li                      { font-weight: bold; float: left; zoom: 1; background: #ccc; }*/
+                ul.dropdown li {
+                    font-weight: bold;
+                    float: left;
+                    zoom: 1;
+                    background: #00641E;
+                }
+
+                ul.dropdown a:hover {
+                    color: #000;
+                }
+
+                ul.dropdown a:active {
+                    color: #ffa500;
+                }
+
+                ul.dropdown li a {
+                    display: block;
+                    padding: 4px 8px;
+                    border-right: 1px solid #333;
+                    color: #fff;
+                }
+
+                ul.dropdown li:last-child a {
+                    border-right: none;
+                }
+                /* Doesn't work in IE */
+                ul.dropdown li.hover,
+                ul.dropdown li:hover {
+                    background: Silver;
+                    color: white;
+                    position: relative;
+                }
+
+                    ul.dropdown li.hover a {
+                        color: white;
+                    }
+
+
+                /*
+            LEVEL TWO
+        */
+                ul.dropdown ul {
+                    width: 220px;
+                    visibility: hidden;
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                }
+
+                    ul.dropdown ul li {
+                        font-weight: normal;
+                        background: #00641E;
+                        color: #000;
+                        border-bottom: 1px solid #ccc;
+                        float: none;
+                    }
+
+                        /* IE 6 & 7 Needs Inline Block */
+                        ul.dropdown ul li a {
+                            border-right: none;
+                            width: 100%;
+                            display: inline-block;
+                        }
+
+                    /*
+            LEVEL THREE
+        */
+                    ul.dropdown ul ul {
+                        left: 100%;
+                        top: 0;
+                    }
+
+                ul.dropdown li:hover > ul {
+                    visibility: visible;
+                }
+
+
+            .gridStyle {
+                display: none;
+            }
+
+            .buttonStyle {
+                width: 688px;
+            }
+
+            .buttonWidth {
+                width: 120px;
+            }
+
+            .textSelected {
+                background-color: white;
+            }
+
+            a:link {
+                color: black;
+            }
+
+            a:visited {
+                color: black;
+            }
+
+            a:active {
+                color: black;
+            }
+    </style>
+    <br />
+
+    <div id="main" class="container-fluid">
+        <div id="topSection" class="col-xs-12">
+            <div class="logo pull-left col-xs-4">
+                <img src="images/storm-logo-name-2.png" />                
+            </div>
+
+            <br />
+            <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Inbox</a><br /></h4>
+            <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">New Messages</a><br /></h4>
+            <h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Archieve</a><br /></h4>
+
+                <div class="hideSkiplink col-xs-12">
+                    <ul class="dropdown pull-left">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Menu Generator</a></li>
+                        <li><a href="#">Export</a></li>
+                        <li><a href="#">Admin</a></li>
+                        <li><a href="#">Help</a></li>
+                    </ul>
+
+                </div>
+            
+            </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div id="addNew">
+            <ul>
+            <li><img title="Add Translator" alt="Add Translator" src="Images/new-spec-icon.png" width="30px" border="0" height="30px" />&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<input id="search" type="text" /><img title="Search Translator" alt="Search Translator" src="Images/search-icon.png" width="30px" border="0" height="30px" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sort By:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="search" type="text" />&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;<input id="btnclear" type="button" value="Clear" style="background-color:green;color:white;border-color:green;"/></li>
+                
+            </ul>
+        </div><br /><br />
+        <div>
+            <h4 style="color:green;">Filters :</h4><br />
+            <img title="Filter Translator" alt="Filter Translator" src="Images/sort-down-icon_20.png" />&nbsp;&nbsp;&nbsp;Company<br /><br />
+            <input type="checkbox" name="Checkbox1" value="Nike" />&nbsp;&nbsp;&nbsp;Nike<br />
+            <input type="checkbox" name="Checkbox2" value="Nike" />&nbsp;&nbsp;&nbsp;Leer<br />
+            <input type="checkbox" name="Checkbox3" value="Nike" />&nbsp;&nbsp;&nbsp;Air France<br />
+        </div><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        <div>
+            <select class="pull-left">
+                <option>25 Results</option>
+                <option>50 Results</option>
+                <option>100 Results</option>
+            </select> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<img title="First" alt="First" src="Images/First.png" height="30px" width="30px" />&nbsp;&nbsp;&nbsp;&nbsp;<img title="Previous" alt="Previous" src="Images/Previous.png" height="30px" width="30px" />&nbsp;&nbsp;&nbsp;&nbsp;1/4&nbsp;&nbsp;&nbsp;&nbsp;<img title="Next" alt="Next" src="Images/Next.png" height="30px" width="30px" />&nbsp;&nbsp;&nbsp;&nbsp;<img title="Last" alt="Last" src="Images/Last.png" height="30px" width="30px" />
+
+        </div>
+</body>
+</html>

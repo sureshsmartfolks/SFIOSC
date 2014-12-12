@@ -1,0 +1,1041 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Storm</title>
+    <!--no idea what this does.....-->
+    <!--<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />-->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
+    <link rel="stylesheet" href="Styles/bootstrap.min.css" />
+    <!--<script type="text/javascript" src="Scripts/jquery-1.7.2.min.js"></script>-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<!--	<script type="text/javascript" src="//code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+	<script type="text/javascript" src="Scripts/common.js"></script>
+    <script type="text/javascript" src="Scripts/Authenticate.js"></script>
+	<script type="text/javascript" src="Scripts/jquerydialog.js"></script>
+	<script type="text/javascript" src="Scripts/jquery.ui.effect.js"></script>
+	<script type="text/javascript" src="Scripts/jquery.ui.widget.js"></script>
+	<script type="text/javascript" src="Scripts/jquery.ui.position.js"></script>-->
+	<script type="text/javascript" src="Scripts/jsrender.js"></script>
+<!--    <script type="text/javascript" src="Scripts/jsviews.js"></script>-->
+	<!--<script type="text/javascript" src="Scripts/modernizr.js"></script>-->
+	<script type="text/javascript" src="Scripts/json.js"></script>
+	<script type="text/javascript" src="Scripts/StormPMServiceObjects.js"></script>
+    <script type="text/javascript" src="//localhost/api/proxies"></script>
+
+    <script src="businessObjects.js"></script>
+
+</head>
+
+<body>
+
+    <style>
+        body {
+            font-size: 1.2em;
+        }
+        /* default CSS */
+
+        div.hideSkiplink {
+            background-color: #00641e;
+            padding-left: 0;
+            padding-right: 0;
+            height: 30px;
+            z-index: 999;
+        }
+
+            div.hideSkiplink ul {
+                padding-left: 0px;
+            }
+
+        a {
+            text-decoration: none;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        p {
+            margin: 15px 0;
+        }
+
+        /* 
+	LEVEL ONE
+*/
+        ul.dropdown {
+            position: relative;
+        }
+            /*ul.dropdown li                      { font-weight: bold; float: left; zoom: 1; background: #ccc; }*/
+            ul.dropdown li {
+                font-weight: bold;
+                float: left;
+                zoom: 1;
+                background: #00641e;
+            }
+
+            ul.dropdown a:hover {
+                color: #000;
+            }
+
+            ul.dropdown a:active {
+                color: #ffa500;
+            }
+
+            ul.dropdown li a {
+                display: block;
+                padding: 4px 8px;
+                border-right: 1px solid #333;
+                color: #fff;
+            }
+
+            ul.dropdown li:last-child a {
+                border-right: none;
+            }
+            /* Doesn't work in IE */
+            ul.dropdown li.hover,
+            ul.dropdown li:hover {
+                background: Silver;
+                color: black;
+                position: relative;
+            }
+
+                ul.dropdown li.hover a {
+                    color: black;
+                }
+
+
+            /* 
+	LEVEL TWO
+*/
+            ul.dropdown ul {
+                width: 220px;
+                visibility: hidden;
+                position: absolute;
+                top: 100%;
+                left: 0;
+            }
+
+                ul.dropdown ul li {
+                    font-weight: normal;
+                    background: #74A5DA;
+                    color: #000;
+                    border-bottom: 1px solid #ccc;
+                    float: none;
+                }
+
+                    /* IE 6 & 7 Needs Inline Block */
+                    ul.dropdown ul li a {
+                        border-right: none;
+                        width: 100%;
+                        display: inline-block;
+                    }
+
+                /* 
+	LEVEL THREE
+*/
+                ul.dropdown ul ul {
+                    left: 100%;
+                    top: 0;
+                }
+
+            ul.dropdown li:hover > ul {
+                visibility: visible;
+            }
+
+
+        .gridStyle {
+            display: none;
+        }
+
+        .buttonStyle {
+            width: 688px;
+        }
+
+        .buttonWidth {
+            width: 120px;
+        }
+
+        .textSelected {
+            background-color: White;
+        }
+
+        a:link {
+            color: black;
+        }
+
+        a:visited {
+            color: black;
+        }
+
+        a:active {
+            color: black;
+        }
+    </style>
+
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <br />
+    <div id="main" class="container-fluid">
+        <div id="topSection" class="col-xs-12">
+            <div class="logo pull-left col-xs-4">
+                <img src="images/storm-logo-name-2.png" />
+            </div>
+
+
+            <div class="hideSkiplink col-xs-12">
+                <ul class="dropdown pull-left">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Statistics</a></li>
+                    <li><a href="#">Project Management</a></li>
+                    <li><a href="#">Resource Management</a></li>
+                </ul>
+
+
+            </div>
+
+        </div>
+    </div>
+
+        <div class="row">
+            <div id="leftFeature" class="col-xs-1">
+            </div>
+
+            <div id="mainFeature" class="col-xs-11">
+                <div class="feature" style="padding-right: 15px;">
+                    <div id="gridFeatures" class="col-xs-12" style="height: 50px;">
+                        <div class="col-xs-1 pull-right"></div>
+                    </div>
+                    <div class="container col-xs-8 CardHolder" style="background-color: #E5E5E5">
+                        <div id="CardHolderTemplate"></div>
+
+
+                        <div id="project"></div>
+
+                    </div>
+                </div>
+
+
+
+                <div title="Message" id="divMessage" style="text-align: center; vertical-align: middle; display: none;"></div>
+                <div id="divFeatureModal" style="text-align: center; vertical-align: middle; display: none;"></div>
+            </div>
+
+        </div>
+
+    <script id="proj" type="text/x-jsrender">
+        <div class="panel panel-primary col-xs-12">
+            <div class="" style="background-color: green;">
+                <button type="button" class="btn btn-group btn-group-xs" onclick="window.history.back();"> <<< </button>
+                <span id="projectNameRO" style="margin-left: 5px; text-decoration: underline; font-size: x-large; color:white;">{{>projectName}}</span>
+                <span class="input-group input-group-xs" id="projectNameRW" style="display:none; margin-left: 5px; text-decoration: underline; font-size: x-large">
+                    <input class="form-control" id="project_name" type="text" value="{{>projectName}}" />
+                </span>
+                <span id="projectStatRO" style="text-align: right; font-style: italic; font-size: x-large" class="col-xs-4 pull-right">{{>trackStatus}}</span>
+                <span class="input-group input-group-xs pull-right" id="projectStatRW" style="display:none; text-align : right; font-style: italic; font-size: x-large" class="col-xs-4 pull-right">
+                    <input class="form-control" id="project_status" type="text" value="{{>trackStatus}}" />
+                        <!--<input class="form-control" id="btnSaveProjectDetails" type="button" class="btn btn-default btn-xs" value="SAVE" />-->
+                </span>
+            </div>
+            <div class="row">
+                <!-- add status here -->
+                <a href="#" id="btnEdit">edit</a>
+                <div  id="clientInfoRO" class="col-xs-6 pull-left " style="margin-left: 20px; font-size: 16px;">
+                        {{>client.name}}<br />
+                        {{>client.phoneNumber}}<br />
+                        {{>client.email}}
+                </div>
+                <div  id="clientInfoRW" class="input-group input-group-sm col-xs-2 pull-left" style="display:none; margin-left: 20px; font-size: 16px;">
+                        <input class="form-control" id="client_Name" type="text" value="{{>client.name}}" /><br />
+                        <input class="form-control" id="client_phoneNumber" type="text" value="{{>client.phoneNumber}}" /><br />
+                        <input class="form-control" id="client_email" type="text" value="{{>client.email}}" />
+                        <input class="form-control btn btn-default btn-xs" id="client_SAVE" type="button" value="SAVE" />
+                </div>
+                <!-- add PM here -->
+                <div class="col-xs-4 pull-right" style="text-align: right;"><span style="margin-right: 20px; font-size: large;">{{>pmName}}</span> </div>
+                <!-- </div> -->
+                <!-- <div class="row"> -->
+                <!-- add Cost here -->
+                <div id="projectQuote" class="col-xs-4 pull-right">
+                    <h3>$133.70</h3>
+                </div>
+            </div>
+            <div class="row"></div>
+            <div class="row">
+                <div id="sideMenu" class="col-xs-2">
+                <div class="panel panel-primary">
+                <div class="panel-heading">tabs</div>
+
+                    <table class="table table-hover table-bordered">
+
+                        <tbody>
+                            <tr id="menuDocs">
+                                <td>Documents</td>
+                            </tr>
+                            <tr id="menuResources">
+                                <td>Resources</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    </div>
+                </div>
+                <div id="mixedContent" class="col-xs-10"></div>
+            </div>
+            <!-- add #docs and #recs (approved) tag here -->
+
+            <!--list of documents-->
+            <!--filename of document, Languages , latest Status-->
+
+            <!-- <div id="mixedContent" class="row col-xs-10 col-xs-offset-1"> -->
+
+
+
+
+        </div>
+    </script>
+
+    <script id="mcReso" type="text/x-jsrender">
+        <div class="row col-xs-12">
+            <div class="panel panel-primary">
+                <div class="panel-heading">Resources</div>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <td>
+                                <div class="row" style="font-size:1.2em; font-weight: bold">
+                                <div class="col-xs-1">ID</div>
+                            <div class="col-xs-4">Contact Information</div>
+                            <div class="col-xs-3">Type</div>
+                            <div class="col-xs-3">Allowed Translations</div>
+                                </div>
+                            </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{for resources}}
+                        
+
+
+                            <tr>
+                                <td>
+                                    <div id="res_{{>#index}}" class="row">
+                                        <div class="col-xs-1">{{>resourceID}}</div>
+                                        <div class="col-xs-4">
+                                            {{>firstName}} {{>lastName}} <br />
+                                            {{>company}}<br />
+                                            {{>address}}
+                                        </div>
+                                        <div class="col-xs-3">{{:~resoTypes[type]}}<br /></div>
+                                        <div class="col-xs-3">
+                                            {{for languageAssociations.translateDirectionID}}
+                                                {{:~langDat[#data]}}<br />
+                                            {{/for}}
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
+
+                        {{/for}}
+
+                    </tbody>
+                </table>
+                                <button type="button" id="btnAddRes" class="btn btn-primary btn-xs col-xs-2">Add Resource</button>
+                <button type="button" id="btnSaveAll" class="btn btn-primary btn-xs col-xs-2 pull-right">Save All Changes</button>
+            </div>
+        </div>
+    </script>
+
+    <script id="mcDocs" type="text/x-jsrender">
+        <div class="row col-xs-12">
+            <div class="panel panel-primary">
+                <div class="panel-heading">Documents</div>
+
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <td colspan="4">
+                                <div class="row" style="font-size:1.2em; font-weight: bold">
+
+                                    <div class="col-xs-3">Name</div>
+                                    <div class="col-xs-3">Document Type</div>
+                                    <div class="col-xs-3">Target Languages</div>
+                                    <div class="col-xs-3">Status</div>
+
+                                </div>
+                            </td>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        {{for documents}}
+                        
+
+
+                            <tr>
+                                <td colspan="4">
+                                    <div id="doc_{{>#index}}" class="row">
+                                        <div class="col-xs-3">{{>name}}</div>
+                                        <div class="col-xs-3">{{:~docTypes[typeID]}}</div>
+                                        <div class="col-xs-3">
+                                            {{for translateDirections.translateDirectionID}}
+                                                {{:~langDat[#index]}}<br />
+                                            {{/for}}
+                                        </div>
+                                        <div class="col-xs-3">
+                                            {{if status=="1"}}
+                                                <span class="label label-info col-xs-12">APPROVED!!!</span>
+                                            {{else}}
+                                                <span class="label label-success col-xs-12">PENDING?</span>
+                                            {{/if}}
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        
+                        {{/for}}
+                        
+                    </tbody>
+                </table>
+                <button type="button" id="btnAddDoc" class="btn btn-primary btn-xs col-xs-2">Add Document</button>
+                <button type="button" id="btnSaveAll" class="btn btn-primary btn-xs col-xs-2 pull-right">Save All Changes</button>
+            </div>
+        </div>
+    </script>
+
+
+    <script type="text/javascript">
+        var newProject = false;
+        pDTO = ProjectDTO();
+
+        //to access variables in the templates
+        $.views.helpers({
+            langDat: langDirections,
+            docTypes: docTypes,
+            resoTypes: resoTypes
+        });
+
+        // this needs to be.... functionafied... to search
+            m = location.search
+        mm = m.substr(1).split("&");
+        mm[0].var = mm[0].split("=")[0];
+        mm[0].val = mm[0].split("=")[1];
+
+        if (mm[0].split("=")[0] =="id")
+            pDTO.projectID = mm[0].split("=")[1];
+
+        $(document).ready(loadProject);
+
+        function loadProject() {
+
+            newProject = pDTO.projectID == null || pDTO.projectID == 0;
+            if (newProject) {
+                // create new project
+
+                var ben = ProjectManagementRequest();
+
+                //ben.projects.add(ProjectDTO());
+
+                //ben.projects[0] = ProjectDTO();
+                ben.projects[0].trackStatus = "status?";
+                ben.projects[0].documents[ben.projects[0].documents.length] = DocumentDTO();
+                //ben.projects[0].documents[0].name = "DOC1";
+                //ben.projects[0].documents[0].filePath = "x:\\sick.jpg";
+                //ben.projects[0].documents[0].status = 1;
+                //ben.projects[0].documents[0].sourceLanguageID = 1;
+                ben.projects[0].documents[0].translateDirections = LanguageDTO();
+                //ben.projects[0].documents[0].translateDirections.translateDirectionID[0] = 3;
+                //ben.projects[0].documents[0].translateDirections.translateDirectionID[1] = 2;
+                //ben.projects[0].documents[0].typeID = "JPG";
+
+                //ben.projects[0].documents[ben.projects[0].documents.length] = DocumentDTO();
+                //ben.projects[0].documents[1].name = "DOC2";
+                //ben.projects[0].documents[1].filePath = "x:\\wuuuhhaaa!!?!?.jpg";
+                //ben.projects[0].documents[1].status = 0;
+
+                ben.projects[0].client.name = "name";
+                ben.projects[0].client.email = "email";
+                ben.projects[0].client.phoneNumber = "phone #";
+                //ben.projects[0].client.ID = "2";
+                ben.projects[0].projectName = "project name";
+
+                // RESOURCES
+                ben.projects[0].resources[ben.projects[0].resources.length] = ResourceDTO();
+                //ben.projects[0].resources[0].firstName = "Don";
+                //ben.projects[0].resources[0].lastName = "Matroska";
+                //ben.projects[0].resources[0].company = "OSC";
+                //ben.projects[0].resources[0].address = "100 disney drive";
+                //ben.projects[0].resources[0].type = "0";
+                //ben.projects[0].resources[0].isCompany = false;
+                ben.projects[0].resources[0].languageAssociations = LanguageDTO();
+                //ben.projects[0].resources[0].languageAssociations.translateDirectionID[0] = 1;
+                //ben.projects[0].resources[0].languageAssociations.translateDirectionID[1] = 3;
+                //ben.projects[0].resources[0].languageAssociations.translateDirectionID[2] = 6;
+
+                //ben.projects[0].resources[ben.projects[0].resources.length] = ResourceDTO();
+                //ben.projects[0].resources[1].firstName = "Ben";
+                //ben.projects[0].resources[1].lastName = "Spiderbot";
+                //ben.projects[0].resources[1].company = "Sealab";
+                //ben.projects[0].resources[1].address = "1 Underwater Way";
+                //ben.projects[0].resources[1].type = "1";
+                //ben.projects[0].resources[1].isCompany = false;
+                //ben.projects[0].resources[1].languageAssociations = LanguageDTO();
+                //ben.projects[0].resources[1].languageAssociations.translateDirectionID[0] = 2;
+                //ben.projects[0].resources[1].languageAssociations.translateDirectionID[1] = 4;
+                //ben.projects[0].resources[1].languageAssociations.translateDirectionID[2] = 9;
+
+
+                //INVOICES
+                ben.projects[0].invoices[ben.projects[0].invoices.length] = InvoiceDTO();
+                //ben.projects[0].invoices[0].price = 0.50;
+                //ben.projects[0].invoices[0].status = 1;
+                //ben.projects[0].invoices[0].version = 1.00;
+                //ben.projects[0].invoices[0].documentID = 344;
+
+                //ben.projects[0].invoices[ben.projects[0].invoices.length] = InvoiceDTO();
+                //ben.projects[0].invoices[1].price = 26.00;
+                //ben.projects[0].invoices[1].status = 0;
+                //ben.projects[0].invoices[1].version = 3.141569;
+                //ben.projects[0].invoices[1].documentID = 321;
+
+                pDTO = ben.projects;
+
+                getSuccess();
+                editClient();
+
+            } else {
+                getData();
+                //alert("Getdata");
+            }
+
+
+        }
+
+
+        function editProject() {
+            $('#projectNameRO').hide();
+            $('#projectStatRO').hide();
+            $('#projectStatRW').show();
+            $('#projectNameRW').show();
+        }   
+
+        function saveProjectDetails() {
+            pDTO[0].projectName = $('#project_name').val();
+            pDTO[0].trackStatus = $('#project_status').val();
+
+            $('#projectNameRO').html(pDTO[0].projectName);
+            $('#projectStatRO').html(pDTO[0].trackStatus);
+
+            $('#projectNameRW').hide();
+            $('#projectStatRW').hide();
+            $('#projectNameRO').show();
+            $('#projectStatRO').show();
+        }
+
+
+        function showDocs() {
+            $("#mixedContent").html(
+                $("#mcDocs").render(pDTO[0]));
+            $('#menuDocs').css("background-color", "#f5f5f5"); // selected change to grayish....
+            $('#menuResources').css("background-color", "#ffffff");
+            for (var x = 0; x < pDTO[0].documents.length; x++) {
+                if (pDTO[0].documents[x].name != "0")
+                    $('#doc_' + x).on('click', editDoc);
+                else {
+                    $('#doc_' + x).css('background-color', "#aaaaaa");
+                    $('#doc_' + x).css('display', "none");
+                }
+            }
+            $('#btnSaveAll').on('click', saveProject);
+            $('#btnAddDoc').on('click', newDoc);
+        }
+
+        function editDoc() {
+            $(this).unbind('click');
+            var x = this.id.split("_")[1];
+            var exHTML = "";
+            btnClass = " class=\"btn btn-default btn-xs\" ";
+            sizeClass= " class=\"col-xs-2\" ";
+                var isDeleted = pDTO[0].documents[x].name == "0";
+                if (pDTO[0].documentID = 0)
+                    var tag = "doc_NEW" + x;
+                else
+                    var tag = "doc_" + x;
+            
+                //if (isDeleted)
+                //    exHTML += "DEL";
+                //else
+                //    exHTML += pDTO[0].documents[x].documentID;
+            //exHTML = "<div class=\"row\">";
+                exHTML += " <div class=\"col-xs-3\">";
+
+                if (pDTO[0].documents[x].name == null)
+                    exHTML += "filename <input id=\"" + tag + "_Path" + "\" type=\"text\" value=\"" + pDTO[0].documents[x].filePath + "\" />\n";
+                exHTML += " <input id=\"" + tag + "_name" + "\" type=\"text\" value=\"" + pDTO[0].documents[x].name + "\" /></div>\n";
+
+                exHTML += " <div class=\"col-xs-3\">\n";
+                exHTML += "<select id=\"" + tag + "_typeID\">\n";
+                for (var xx = 0; xx < docTypes.length; xx++) {
+                    exHTML += "  <option value=\"" + xx + "\">" + docTypes[xx] + "</option>\n";
+                }
+                //exHTML += "  <option value=\"1\">" + resoTypes[1] + "</option>\n";
+                exHTML += "</select>\n";
+                exHTML += " </div>\n";
+
+            //    exHTML += " <div class=\"col-xs-2 col-xs-offset-1\"><input id=\"" + tag + "_typeID" + "\" type=\"text\" value=\"" + pDTO[0].documents[x].typeID + "\" /></div>\n";
+
+
+
+            // add / remove translate
+                //exHTML += " <div class=\"col-xs-2 col-xs-offset-1\">"
+                //exHTML += " <input id=\"" + tag + "_typeID" + "\" type=\"text\" value=\"" + pDTO[0].documents[x].typeID + "\" />\n";
+                //exHTML += " <input id=\"" + tag + "_typeID" + "\" type=\"text\" value=\"" + pDTO[0].documents[x].typeID + "\" />\n";
+                //exHTML += " <input id=\"" + tag + "_typeID" + "\" type=\"text\" value=\"" + pDTO[0].documents[x].typeID + "\" />\n";
+                //exHTML += " </div>";
+
+                exHTML += " <div class=\"col-xs-3\">\n";
+                exHTML += "<select id=\"" + tag + "_lang\" multiple>\n";
+                for (var xx = 0; xx < langDirections.length; xx++) {
+                    exHTML += "  <option value=\"" + xx + "\">" + langDirections[xx] + "</option>\n";
+                }
+                exHTML += "</select>\n";
+                exHTML += " </div>\n";
+
+                exHTML += "<div class=\"col-xs-3\">\n";
+                exHTML += "<select id=\"" + tag + "_status\">\n";
+                    exHTML += "  <option value=\"1\">Complete</option>\n";
+                    exHTML += "  <option value=\"0\">Pending</option>\n";
+                exHTML += "</select>\n";
+
+
+                //exHTML += " <div class=\"col-xs-2 col-xs-offset-1\"><input id=\"" + tag + "_status" + "\" type=\"text\" value=\"" + pDTO[0].documents[x].status + "\" />\n";
+
+
+                //exHTML += "<div class=\"dropdown\">                                                                                             "
+                //exHTML += "  <button class=\"btn btn-default dropdown-toggle\" type=\"button\" id=\"dropdownMenu1\" data-toggle=\"dropdown\">   "
+                //exHTML += "    Status                                                                                                         "
+                //exHTML += "    <span class=\"caret\"></span>                                                                                    "
+                //exHTML += "  </button>                                                                                                          "
+                //exHTML += "  <ul class=\"dropdown-menu\" role=\"menu\" aria-labelledby=\"dropdownMenu1\">                                       "
+                //exHTML += "    <li role=\"presentation\"><a role=\"menuitem\" tabindex=\"-1\" href=\"#\">Complete</a></li>                        "
+                //exHTML += "    <li role=\"presentation\"><a role=\"menuitem\" tabindex=\"-1\" href=\"#\">Incomplete</a></li>                "
+                //exHTML += "    <li role=\"presentation\"><a role=\"menuitem\" tabindex=\"-1\" href=\"#\">Something else here</a></li>           "
+                //exHTML += "    <li role=\"presentation\" class=\"divider\"></li>                                                                "
+                //exHTML += "    <li role=\"presentation\"><a role=\"menuitem\" tabindex=\"-1\" href=\"#\">Separated link</a></li>                "
+                //exHTML += "  </ul>                                                                                                              "
+                //exHTML += "</div>                                                                                                               "
+
+
+                if (!isDeleted)
+                    exHTML += "<br/> <input id=\"doc_" + x + "_DEL\"" + btnClass + "type=\"button\" value=\"DEL\" />";
+                exHTML += " <input id=\"doc_" + x + "_SAVE\"" + btnClass + "type=\"button\" value=\"SAVE\" /></div>";
+
+                exHTML += " </div>\n";
+                //exHTML = "</div>";
+                //exHTML += "<br />";
+                //   $(tag).val(pDTO.projects[0].documents[x].name);
+
+                $(this).html(exHTML);
+
+                $('#' + tag + '_typeID').val(pDTO[0].documents[x].typeID);
+                $('#' + tag + '_status').val(pDTO[0].documents[x].status);
+                $('#doc_' + x + '_lang').val(pDTO[0].documents[x].translateDirections.translateDirectionID);
+
+                $('#doc_' + x + '_DEL').on('click', deleteDoc);
+                $('#doc_' + x + '_SAVE').on('click', saveDoc);
+        }
+
+        function newRes() {
+            //alert("new!");
+            //save values
+            xx = pDTO[0].resources.length - 1;
+
+            pDTO[0].resources[++xx] = ResourceDTO();
+
+            //var tag = "#doc_NEW" + xx;
+            //pDTO.projects[0].documents[xx].firstName = $(tag + "_firestName").val();
+            //pDTO.projects[0].documents[xx].lastName = $(tag + "_lastName").val();
+            //pDTO.projects[0].documents[xx].type = $(tag + "_type").val();
+            ////pDTO.projects[0].documents[xx].filePath = "TEST://" + new Date().getTime();
+
+
+            //for (var x = 0; x < pDTO.projects[0].documents.length - 1; x++) {
+            //    var tag = "#doc_" + x;
+            //    pDTO.projects[0].documents[x].firstName = $(tag + "_firstName").val();
+            //    pDTO.projects[0].documents[x].lastName = $(tag + "_lastName").val();
+            //    pDTO.projects[0].documents[x].type = $(tag + "_type").val();
+            //}
+            showResources();
+        }
+
+        function newDoc() {
+            //alert("new!");
+            //save values
+            xx = pDTO[0].documents.length - 1;
+
+            pDTO[0].documents[++xx] = DocumentDTO();
+
+            //var tag = "#doc_NEW" + xx;
+            //pDTO.projects[0].documents[xx].firstName = $(tag + "_firestName").val();
+            //pDTO.projects[0].documents[xx].lastName = $(tag + "_lastName").val();
+            //pDTO.projects[0].documents[xx].type = $(tag + "_type").val();
+            ////pDTO.projects[0].documents[xx].filePath = "TEST://" + new Date().getTime();
+
+
+            //for (var x = 0; x < pDTO.projects[0].documents.length - 1; x++) {
+            //    var tag = "#doc_" + x;
+            //    pDTO.projects[0].documents[x].firstName = $(tag + "_firstName").val();
+            //    pDTO.projects[0].documents[x].lastName = $(tag + "_lastName").val();
+            //    pDTO.projects[0].documents[x].type = $(tag + "_type").val();
+            //}
+            showDocs();
+        }
+
+        function saveProject() {
+            //pDTO.projects[0].projectName = $('#projectName').val();
+
+            ////pDTO.projects[0].client
+            //pDTO.projects[0].client.name = $('#clientName').val();
+            //pDTO.projects[0].client.phoneNumber = $('#clientPhone').val();
+            //pDTO.projects[0].client.email = $('#clientEmail').val();
+
+            //remove new deleted docs
+            //for
+            //if (pDTO.projects[0].documents[x].name == "0" && pDTO.projects[0].documents[x].DocumentID == 0)
+            //    pDTO.projects[0].documents.splice(x, 1);
+
+            //for (var x = 0; x < pDTO.projects[0].documents.length; x++) {
+            //    var tag = "#doc_" + x;
+            //    pDTO.projects[0].documents[x].name = $(tag + "_name").val();
+            //    pDTO.projects[0].documents[x].status = $(tag + "_status").val();
+            //    pDTO.projects[0].documents[x].typeID = $(tag + "_typeID").val();
+            //}
+            //projectname
+            //clientName
+            //clientEmail
+            //clientPhone
+            //DOCS
+            //urlCall = "//localhost/ProjectManagement-API/api/projectmanagement/postProject";
+
+            msGG = ProjectManagementRequest();
+
+            msGG.projects[0] = ProjectDTO();
+
+            msGG.projects[0] = pDTO[0];
+
+            $.ajax({
+                type: "POST",
+                //url: "//localhost/projectmanagementweb/",
+                url: "http://localhost:50833/api/projectManagement/postProject",
+                data: JSON.stringify(msGG),
+                contentType: "application/json;charset=UTF-8",
+                success: saveSuccess,
+                error: saveFAIL
+
+            });
+
+            //relist
+//            listDocuments();
+            //listResources();
+
+
+        }
+
+        function saveSuccess(msg, status, err) {
+            //alert("time to save?" + status);
+
+            //location.reload();
+            if (newProject)
+                location.search = "?id=" + msg.newID;
+            else
+                location.reload();
+        }
+
+        function saveFAIL(msg, status, err) {
+            alert("no bueno :(\n" + status);
+        }
+
+        function saveDoc() {
+            var x = this.id.split("_")[1];
+            var tag = "#doc_" + x;
+            pDTO[0].documents[x].name = $(tag + "_name").val();
+            pDTO[0].documents[x].status = $(tag + "_status").val();
+            pDTO[0].documents[x].typeID = $(tag + "_typeID").val();
+
+            if (pDTO[0].documents[x].filePath == null)
+                pDTO[0].documents[x].filePath = $(tag + "_Path").val();
+
+            pDTO[0].documents[x].translateDirections.translateDirectionID = $('#doc_' + x + '_lang').val();
+            showDocs();
+            $('#doc_' + x).on('click', editDoc);
+
+
+        }
+
+        function deleteDoc() {
+            var x2 = this.id.split("_")[1];
+            if (pDTO[0].documents[x2].documentID)
+                pDTO[0].documents[x2].name = "0";
+            else
+                pDTO[0].documents.splice(x2, 1); // remove from array
+            showDocs();
+            //listDocuments();
+        }
+
+        function showResources() {
+            $("#mixedContent").html(
+                $("#mcReso").render(pDTO[0]));
+            $('#menuDocs').css("background-color", "#f5f5f5"); 
+            $('#menuResources').css("background-color", "#f5f5f5"); // selected change to grayish....
+            
+            // modify if deleted
+            for (var x = 0; x < pDTO[0].resources.length; x++) {
+                if (pDTO[0].resources[x].firstName != "0")
+                    $('#res_' + x).on('click', editRes);
+                else
+                    $('#res_' + x).css('background-color', "#aaaaaa");
+            }
+            $('#btnSaveAll').on('click', saveProject);
+            $('#btnAddRes').on('click', newRes);
+        }
+ 
+        //var projectDocument = [];
+
+
+        function editRes() {
+            $(this).unbind('click');
+            var x = this.id.split("_")[1];
+            var exHTML = "";
+            btnClass = " class=\"btn btn-default btn-xs\" ";
+            sizeClass = " class=\"col-xs-2\" ";
+            var isDeleted = pDTO[0].resources[x].firstName == "0";
+            if (pDTO[0].resourceID = 0)
+                var tag = "res_NEW" + x;
+            else
+                var tag = "res_" + x;
+
+            //if (isDeleted)
+            //    exHTML += "DEL";
+            //else
+            //    exHTML += pDTO[0].resources[x].documentID;
+            //exHTML = "<div class=\"row\">";
+            //exHTML += " <div class=\"col-xs-2\">";
+
+            //            if (pDTO[0].resources[x].name == null)
+            //                exHTML += "filename <input id=\"" + tag + "_Path" + "\" type=\"text\" value=\"" + pDTO[0].resources[x].filePath + "\" />\n";
+            exHTML += "<div class=\"row\">\n";
+            exHTML += " <div class=\"col-xs-4 col-xs-offset-1\">\n";
+            exHTML += " <input size=\"7\" id=\"" + tag + "_firstName" + "\" type=\"text\" value=\"" + pDTO[0].resources[x].firstName + "\" />\n";
+            exHTML += " .<input size=\"7\" id=\"" + tag + "_lastName" + "\" type=\"text\" value=\"" + pDTO[0].resources[x].lastName + "\" /><br />\n";
+            exHTML += " <input id=\"" + tag + "_company" + "\" type=\"text\" value=\"" + pDTO[0].resources[x].company + "\" /><br />\n";
+            exHTML += " <input id=\"" + tag + "_address" + "\" type=\"text\" value=\"" + pDTO[0].resources[x].address + "\" />\n";
+            exHTML += " </div>\n";
+
+            //exHTML += " <div class=\"col-xs-3\">\n";
+            //exHTML += " <input id=\"" + tag + "_type" + "\" type=\"text\" value=\"" + pDTO[0].resources[x].type + "\" />\n";
+            //exHTML += " </div>\n";
+
+            exHTML += " <div class=\"col-xs-3\">\n";
+            exHTML += "<select id=\"" + tag + "_type\">\n";
+            for (var xx = 0; xx < resoTypes.length; xx++) {
+                exHTML += "  <option value=\"" + xx + "\">" + resoTypes[xx] + "</option>\n";
+            }
+            //exHTML += "  <option value=\"1\">" + resoTypes[1] + "</option>\n";
+            exHTML += "</select>\n";
+            exHTML += " </div>\n";
+
+            exHTML += " <div class=\"col-xs-3\">\n";
+            exHTML += "<select id=\"" + tag + "_lang\" multiple>\n";
+            for (var xx = 0; xx < langDirections.length; xx++) {
+                exHTML += "  <option value=\"" + xx + "\">" + langDirections[xx] + "</option>\n";
+            }
+            exHTML += "</select>\n";
+            exHTML += " </div>\n";
+            exHTML += " </div>\n";
+
+
+            //exHTML += " <div class=\"col-xs-3\">\n";
+            //exHTML += " <input id=\"" + tag + "_name" + "\" type=\"text\" value=\"" + pDTO[0].resources[x].name + "\" /><br />\n";
+            //exHTML += " <input id=\"" + tag + "_name" + "\" type=\"text\" value=\"" + pDTO[0].resources[x].name + "\" /><br />\n";
+            //exHTML += " <input id=\"" + tag + "_name" + "\" type=\"text\" value=\"" + pDTO[0].resources[x].name + "\" />\n";
+            //exHTML += " </div>\n";
+            //exHTML += " </div>\n";
+
+            exHTML += "<div class=\"row\">\n";
+            exHTML += " <div class=\"col-xs-2 pull-right\">\n";
+            if (!isDeleted)
+                exHTML += " <input id=\"res_" + x + "_DEL\"" + btnClass + "type=\"button\" value=\"DEL\" />\n";
+            exHTML += " <input id=\"res_" + x + "_SAVE\"" + btnClass + "type=\"button\" value=\"SAVE\" />\n";
+            exHTML += " </div>\n";
+            exHTML += " </div>\n";
+            //exHTML = "</div>";
+            //exHTML += "<br />";
+            //   $(tag).val(pDTO.projects[0].resources[x].name);
+
+
+            $(this).html(exHTML);
+
+            $('#' + tag + '_type').val(pDTO[0].resources[x].type);
+            $('#res_' + x + '_lang').val(pDTO[0].resources[x].languageAssociations.translateDirectionID);
+
+            $('#res_' + x + '_DEL').on('click', deleteRes);
+            $('#res_' + x + '_SAVE').on('click', saveRes);
+        }
+
+        function deleteRes() {
+            var x2 = this.id.split("_")[1];
+            if (pDTO[0].resources[x2].resourceID)
+                pDTO[0].resources[x2].firstName = "0";
+            else
+                pDTO[0].resources.splice(x2, 1); // remove from array
+            showResources();
+            //listDocuments();
+        }
+
+        function saveRes() {
+            var x = this.id.split("_")[1];
+            var tag = "#res_" + x;
+            pDTO[0].resources[x].firstName = $(tag + "_firstName").val();
+            pDTO[0].resources[x].lastName = $(tag + "_lastName").val();
+            pDTO[0].resources[x].company = $(tag + "_company").val();
+            pDTO[0].resources[x].type = $(tag + "_type").val();
+            pDTO[0].resources[x].address = $(tag + "_address").val();
+
+
+            pDTO[0].resources[x].languageAssociations.translateDirectionID = $('#res_' + x + '_lang').val();
+
+            showResources();
+            $('#res_' + x).on('click', editRes);
+        }
+
+        function getData() {
+            //urlCall = "https://localhost/projectmanagementweb/" + pDTO.projectID;
+            urlCall = "http://localhost:50833/api/projectManagement/getProject/" + pDTO.projectID;
+            $.ajax({
+                type: "GET",
+                url: urlCall,
+                data: "",
+                contenttype: "application.json;charset=UTF-8",
+                success: getSuccess,
+                error: getError
+
+            })
+        }
+
+        function getSuccess(msg, status, err) {
+            //alert(msg.rcd.filePath);
+            //projectDocument[0] = {
+            //    filePath : msg.rcd.filePath,
+            //    status : msg.rcd.status,
+            //    version : msg.rcd.version,
+            //    typeID : msg.rcd.typeID,
+            //    sourceLanguageID : msg.rcd.sourceLanguageID,
+            //    documentID : msg.rcd.documentID,
+            //    projectID : msg.rcd.projectID
+            //};
+
+            //projectDocument[1] = projectDocument[0];
+
+            if (!newProject) {
+
+                pDTO = msg.projects;
+
+                //alert(msg.rcd.filePath);
+
+                //get PM name
+                pDTO[0].pmName = "";
+                for (var x = 0; x < pDTO[0].resources.length; x++) {
+                    if (pDTO[0].resources[x].type == 0)
+                        pDTO[0].pmName = pDTO[0].resources[x].firstName + " " + pDTO[0].resources[x].lastName;
+                }
+
+                if (pDTO[0].pmName == "")
+                    pDTO[0].pmName = "none assigned?";
+
+
+                //$.templates("#documents").render(pDTO.documents)
+
+            }
+
+            $("#project").html(
+                $("#proj").render(pDTO));
+
+            $('#menuDocs').on('click', showDocs);
+            $('#menuResources').on('click', showResources);
+            $('#btnEdit').on('click', editClient);
+            $('#client_SAVE').on('click', saveClient);
+            $('#btnSaveProjectDetails').on('click', saveProjectDetails);
+
+
+            //showDocs();
+            showResources();
+
+
+
+            //var template = $.templates("#documents");
+            //template.link("#docs", projectDocument);
+        }
+
+        function editClient(e) {
+            //$('#clientInfo').unbind('click');
+            //var exHTML = "";
+            //btnClass = " class=\"btn btn-default btn-xs\" ";
+            //sizeClass = " class=\"col-xs-2\" ";
+
+
+            //exHTML += "<div class=\"row\">\n";
+            //exHTML += " <div class=\"col-xs-4 col-xs-offset-1\">\n";
+            //exHTML += " <input id=\"client_Name\" type=\"text\" value=\"" + pDTO[0].client.name + "\" /><br />\n";
+            //exHTML += " <input id=\"client_phoneNumber\" type=\"text\" value=\"" + pDTO[0].client.phoneNumber + "\" /><br />\n";
+            //exHTML += " <input id=\"client_email\" type=\"text\" value=\"" + pDTO[0].client.email + "\" />\n";
+            //exHTML += " </div>\n";
+            //exHTML += " </div>\n";
+
+            //exHTML += "<div class=\"row\">\n";
+            //exHTML += " <div class=\"col-xs-2 pull-right\">\n";
+
+
+            //exHTML += " </div>\n";
+            //exHTML += " </div>\n";
+            ////exHTML = "</div>";
+            ////exHTML += "<br />";
+            ////   $(tag).val(pDTO.projects[0].resources[x].name);
+
+
+            //$(this).html(exHTML);
+
+            $('#clientInfoRO').hide();
+            $('#clientInfoRW').show();
+            editProject(); /// this is a hack :(
+
+        }
+
+        function saveClient() {
+            pDTO[0].client.name = $("#client_Name").val();
+            pDTO[0].client.email = $("#client_email").val();
+            pDTO[0].client.phoneNumber = $("#client_phoneNumber").val();
+
+            exHTML= "";
+
+            exHTML += pDTO[0].client.name      + "<br />\n";
+            exHTML += pDTO[0].client.phoneNumber     + "<br />\n";
+            exHTML += pDTO[0].client.email             ;
+
+            //document.getElementById("clientInfoRO").innerHTML = exHTML;
+
+            $('#clientInfoRO').html(exHTML);
+
+            //$('#clientInfo').on('click', editClient);
+
+            $('#clientInfoRO').show();
+            $('#clientInfoRW').hide();
+            saveProjectDetails(); /// this is a hack :(
+        }
+
+        function getError(msg, status, err) {
+            alert("error="+msg.message);
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+﻿'iisexpress.exe' (CLR v4.0.30319: DefaultDomain): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_32\mscorlib\v4.0_4.0.0.0__b77a5c561934e089\mscorlib.dll'. Symbols loaded.
+'iisexpress.exe' (CLR v4.0.30319: DefaultDomain): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_32\System.Web\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Web.dll'. Symbols loaded.
+'iisexpress.exe' (CLR v4.0.30319: DefaultDomain): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System\v4.0_4.0.0.0__b77a5c561934e089\System.dll'. Symbols loaded.
+'iisexpress.exe' (CLR v4.0.30319: DefaultDomain): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Core\v4.0_4.0.0.0__b77a5c561934e089\System.Core.dll'. Symbols loaded.
+'iisexpress.exe' (CLR v4.0.30319: DefaultDomain): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Web.ApplicationServices\v4.0_4.0.0.0__31bf3856ad364e35\System.Web.ApplicationServices.dll'. Symbols loaded.
+'iisexpress.exe' (CLR v4.0.30319: DefaultDomain): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Configuration\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Configuration.dll'. Symbols loaded.
+'iisexpress.exe' (CLR v4.0.30319: DefaultDomain): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Xml\v4.0_4.0.0.0__b77a5c561934e089\System.Xml.dll'. Symbols loaded.
+'iisexpress.exe' (CLR v4.0.30319: Domain 2): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_32\mscorlib\v4.0_4.0.0.0__b77a5c561934e089\mscorlib.dll'. Symbols loaded.
+'iisexpress.exe' (CLR v4.0.30319: /LM/W3SVC/6/ROOT-1-130628548289047390): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_32\System.Web\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Web.dll'. Symbols loaded.
+'iisexpress.exe' (CLR v4.0.30319: /LM/W3SVC/6/ROOT-1-130628548289047390): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System\v4.0_4.0.0.0__b77a5c561934e089\System.dll'. Symbols loaded.
+'iisexpress.exe' (CLR v4.0.30319: /LM/W3SVC/6/ROOT-1-130628548289047390): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Core\v4.0_4.0.0.0__b77a5c561934e089\System.Core.dll'. Symbols loaded.
+'iisexpress.exe' (CLR v4.0.30319: /LM/W3SVC/6/ROOT-1-130628548289047390): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Web.ApplicationServices\v4.0_4.0.0.0__31bf3856ad364e35\System.Web.ApplicationServices.dll'. Symbols loaded.
+'iisexpress.exe' (CLR v4.0.30319: /LM/W3SVC/6/ROOT-1-130628548289047390): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Configuration\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Configuration.dll'. Symbols loaded.
+'iisexpress.exe' (CLR v4.0.30319: /LM/W3SVC/6/ROOT-1-130628548289047390): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Xml\v4.0_4.0.0.0__b77a5c561934e089\System.Xml.dll'. Symbols loaded.
+'iisexpress.exe' (CLR v4.0.30319: /LM/W3SVC/6/ROOT-1-130628548289047390): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Runtime.Caching\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Runtime.Caching.dll'. Symbols loaded.
+'iisexpress.exe' (CLR v4.0.30319: DefaultDomain): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Runtime.Caching\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Runtime.Caching.dll'. Symbols loaded.
+'iisexpress.exe' (CLR v4.0.30319: /LM/W3SVC/6/ROOT-1-130628548289047390): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\Microsoft.Build.Utilities.v4.0\v4.0_4.0.0.0__b03f5f7f11d50a3a\Microsoft.Build.Utilities.v4.0.dll'. Symbols loaded.
+'iisexpress.exe' (CLR v4.0.30319: DefaultDomain): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\Microsoft.Build.Utilities.v4.0\v4.0_4.0.0.0__b03f5f7f11d50a3a\Microsoft.Build.Utilities.v4.0.dll'. Symbols loaded.
+A first chance exception of type 'System.Globalization.CultureNotFoundException' occurred in mscorlib.dll
+'iisexpress.exe' (CLR v4.0.30319: /LM/W3SVC/6/ROOT-1-130628548289047390): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\Microsoft.JScript\v4.0_10.0.0.0__b03f5f7f11d50a3a\Microsoft.JScript.dll'. Symbols loaded.
+'iisexpress.exe' (CLR v4.0.30319: /LM/W3SVC/6/ROOT-1-130628548289047390): Loaded 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\d6310cc1\7025bf23\assembly\dl3\71909d78\001737b3_0b03d001\ProxyApi.dll'. Cannot find or open the PDB file.
+'iisexpress.exe' (CLR v4.0.30319: /LM/W3SVC/6/ROOT-1-130628548289047390): Loaded 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\d6310cc1\7025bf23\assembly\dl3\17e86a7f\001737b3_0b03d001\System.Web.Mvc.dll'. Cannot find or open the PDB file.
+'iisexpress.exe' (CLR v4.0.30319: /LM/W3SVC/6/ROOT-1-130628548289047390): Loaded 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\d6310cc1\7025bf23\assembly\dl3\ce955bea\001737b3_0b03d001\System.Web.WebPages.Razor.dll'. Cannot find or open the PDB file.
+'iisexpress.exe' (CLR v4.0.30319: /LM/W3SVC/6/ROOT-1-130628548289047390): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\Microsoft.VisualStudio.Web.PageInspector.Loader\v4.0_1.0.0.0__b03f5f7f11d50a3a\Microsoft.VisualStudio.Web.PageInspector.Loader.dll'. Symbols loaded.
+'iisexpress.exe' (CLR v4.0.30319: /LM/W3SVC/6/ROOT-1-130628548289047390): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Web.WebPages.Deployment\v4.0_2.0.0.0__31bf3856ad364e35\System.Web.WebPages.Deployment.dll'. Cannot find or open the PDB file.
+'iisexpress.exe' (CLR v4.0.30319: /LM/W3SVC/6/ROOT-1-130628548289047390): Loaded 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\d6310cc1\7025bf23\assembly\dl3\037be7d5\001737b3_0b03d001\System.Web.WebPages.Deployment.dll'. Cannot find or open the PDB file.
+'iisexpress.exe' (CLR v4.0.30319: /LM/W3SVC/6/ROOT-1-130628548289047390): Loaded 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\d6310cc1\7025bf23\assembly\dl3\fde4f63a\001737b3_0b03d001\System.Web.WebPages.dll'. Cannot find or open the PDB file.
+A first chance exception of type 'System.IO.FileNotFoundException' occurred in mscorlib.dll
+'iisexpress.exe' (CLR v4.0.30319: /LM/W3SVC/6/ROOT-1-130628548289047390): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\Microsoft.VisualStudio.Web.PageInspector.Runtime\v4.0_12.3.0.0__b03f5f7f11d50a3a\Microsoft.VisualStudio.Web.PageInspector.Runtime.dll'. Symbols loaded.
+'iisexpress.exe' (CLR v4.0.30319: /LM/W3SVC/6/ROOT-1-130628548289047390): Loaded 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\d6310cc1\7025bf23\assembly\dl3\c949da0b\001737b3_0b03d001\System.Web.Http.WebHost.dll'. Cannot find or open the PDB file.
+'iisexpress.exe' (CLR v4.0.30319: /LM/W3SVC/6/ROOT-1-130628548289047390): Loaded 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\d6310cc1\7025bf23\assembly\dl3\bf5b1fe2\001737b3_0b03d001\System.Web.Http.dll'. Cannot find or open the PDB file.
+'iisexpress.exe' (CLR v4.0.30319: /LM/W3SVC/6/ROOT-1-130628548289047390): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Net.Http\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Net.Http.dll'. Symbols loaded.
+'iisexpress.exe' (CLR v4.0.30319: /LM/W3SVC/6/ROOT-1-130628548289047390): Loaded 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\d6310cc1\7025bf23\assembly\dl3\9adcfc07\001737b3_0b03d001\System.Net.Http.Formatting.dll'. Cannot find or open the PDB file.
+'iisexpress.exe' (CLR v4.0.30319: /LM/W3SVC/6/ROOT-1-130628548289047390): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Runtime.Serialization\v4.0_4.0.0.0__b77a5c561934e089\System.Runtime.Serialization.dll'. Symbols loaded.
+'iisexpress.exe' (CLR v4.0.30319: /LM/W3SVC/6/ROOT-1-130628548289047390): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\SMDiagnostics\v4.0_4.0.0.0__b77a5c561934e089\SMDiagnostics.dll'. Symbols loaded.
+'iisexpress.exe' (CLR v4.0.30319: /LM/W3SVC/6/ROOT-1-130628548289047390): Loaded 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\d6310cc1\7025bf23\assembly\dl3\c7b789f5\001737b3_0b03d001\Newtonsoft.Json.dll'. Cannot find or open the PDB file.
+'iisexpress.exe' (CLR v4.0.30319: /LM/W3SVC/6/ROOT-1-130628548289047390): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\Microsoft.Web.Infrastructure\v4.0_1.0.0.0__31bf3856ad364e35\Microsoft.Web.Infrastructure.dll'. Symbols loaded.
+'iisexpress.exe' (CLR v4.0.30319: /LM/W3SVC/6/ROOT-1-130628548289047390): Loaded 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\d6310cc1\7025bf23\App_global.asax.psfex8xu.dll'. 
+'iisexpress.exe' (CLR v4.0.30319: /LM/W3SVC/6/ROOT-1-130628548289047390): Loaded 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\d6310cc1\7025bf23\assembly\dl3\3f4259ec\c7a8292c_c315d001\ProjectManagement-API.dll'. Symbols loaded.
+'iisexpress.exe' (CLR v4.0.30319: /LM/W3SVC/6/ROOT-1-130628548289047390): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.ServiceModel.Activation\v4.0_4.0.0.0__31bf3856ad364e35\System.ServiceModel.Activation.dll'. Symbols loaded.
+'iisexpress.exe' (CLR v4.0.30319: /LM/W3SVC/6/ROOT-1-130628548289047390): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Web.Extensions\v4.0_4.0.0.0__31bf3856ad364e35\System.Web.Extensions.dll'. Symbols loaded.
+'iisexpress.exe' (CLR v4.0.30319: /LM/W3SVC/6/ROOT-1-130628548289047390): Loaded 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\d6310cc1\7025bf23\assembly\dl3\11043995\001737b3_0b03d001\System.Web.Http.Cors.dll'. Cannot find or open the PDB file.
+'iisexpress.exe' (CLR v4.0.30319: /LM/W3SVC/6/ROOT-1-130628548289047390): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.ServiceModel.Internals\v4.0_4.0.0.0__31bf3856ad364e35\System.ServiceModel.Internals.dll'. Symbols loaded.
+'iisexpress.exe' (CLR v4.0.30319: /LM/W3SVC/6/ROOT-1-130628548289047390): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Xml.Linq\v4.0_4.0.0.0__b77a5c561934e089\System.Xml.Linq.dll'. Symbols loaded.
+'iisexpress.exe' (CLR v4.0.30319: /LM/W3SVC/6/ROOT-1-130628548289047390): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.ServiceModel\v4.0_4.0.0.0__b77a5c561934e089\System.ServiceModel.dll'. Symbols loaded.
+'iisexpress.exe' (CLR v4.0.30319: /LM/W3SVC/6/ROOT-1-130628548289047390): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\Microsoft.VisualStudio.Web.PageInspector.Tracing\v4.0_12.3.0.0__b03f5f7f11d50a3a\Microsoft.VisualStudio.Web.PageInspector.Tracing.dll'. Symbols loaded.
+A first chance exception of type 'System.Web.HttpException' occurred in System.Web.Mvc.dll
+A first chance exception of type 'System.Web.HttpException' occurred in System.Web.dll
+'iisexpress.exe' (CLR v4.0.30319: /LM/W3SVC/6/ROOT-1-130628548289047390): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Web.Mobile\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Web.Mobile.dll'. Symbols loaded.
+'iisexpress.exe' (CLR v4.0.30319: /LM/W3SVC/6/ROOT-1-130628548289047390): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Web.RegularExpressions\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Web.RegularExpressions.dll'. Symbols loaded.
+'iisexpress.exe' (CLR v4.0.30319: DefaultDomain): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Web.RegularExpressions\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Web.RegularExpressions.dll'. Symbols loaded.
+'iisexpress.exe' (CLR v4.0.30319: /LM/W3SVC/6/ROOT-1-130628548289047390): Loaded 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\d6310cc1\7025bf23\assembly\dl3\60394e71\001737b3_0b03d001\System.Web.Cors.dll'. Cannot find or open the PDB file.
+'iisexpress.exe' (CLR v4.0.30319: /LM/W3SVC/6/ROOT-1-130628548289047390): Loaded 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\d6310cc1\7025bf23\assembly\dl3\b6ef1fc8\232e7b98_2210d001\ResourceManager.dll'. Symbols loaded.
+'iisexpress.exe' (CLR v4.0.30319: /LM/W3SVC/6/ROOT-1-130628548289047390): Loaded 'Anonymously Hosted DynamicMethods Assembly'. 
+'iisexpress.exe' (CLR v4.0.30319: /LM/W3SVC/6/ROOT-1-130628548289047390): Loaded 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\Temporary ASP.NET Files\root\d6310cc1\7025bf23\assembly\dl3\d3fc64ee\f74f672b_c315d001\OSC.ProjectManagement.BusinessObjects.dll'. Symbols loaded.
+'iisexpress.exe' (CLR v4.0.30319: /LM/W3SVC/6/ROOT-1-130628548289047390): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_32\System.Data\v4.0_4.0.0.0__b77a5c561934e089\System.Data.dll'. Symbols loaded.
+'iisexpress.exe' (CLR v4.0.30319: /LM/W3SVC/6/ROOT-1-130628548289047390): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_32\System.Transactions\v4.0_4.0.0.0__b77a5c561934e089\System.Transactions.dll'. Symbols loaded.
+'iisexpress.exe' (CLR v4.0.30319: /LM/W3SVC/6/ROOT-1-130628548289047390): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_32\System.EnterpriseServices\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.EnterpriseServices.dll'. Symbols loaded.
+'iisexpress.exe' (CLR v4.0.30319: /LM/W3SVC/6/ROOT-1-130628548289047390): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_32\System.EnterpriseServices\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.EnterpriseServices.Wrapper.dll'. Symbols loaded.
+'iisexpress.exe' (CLR v4.0.30319: /LM/W3SVC/6/ROOT-1-130628548289047390): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Numerics\v4.0_4.0.0.0__b77a5c561934e089\System.Numerics.dll'. Symbols loaded.
+'iisexpress.exe' (CLR v4.0.30319: /LM/W3SVC/6/ROOT-1-130628548289047390): Loaded 'C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.ComponentModel.DataAnnotations\v4.0_4.0.0.0__31bf3856ad364e35\System.ComponentModel.DataAnnotations.dll'. Symbols loaded.
+The thread 0x1b08 has exited with code 259 (0x103).
+The thread 0xaa4 has exited with code 259 (0x103).
+The thread 0x644 has exited with code 259 (0x103).
+The thread 0xaa8 has exited with code 259 (0x103).
+The thread 0x15d8 has exited with code 259 (0x103).
+The thread 0x10f4 has exited with code 259 (0x103).
+The thread 0x1644 has exited with code 259 (0x103).
+The thread 0x1680 has exited with code 259 (0x103).
+The thread 0x6b4 has exited with code 259 (0x103).

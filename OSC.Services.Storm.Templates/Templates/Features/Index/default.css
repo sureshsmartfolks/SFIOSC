@@ -1,0 +1,32 @@
+﻿        .feature {
+            margin-bottom: 15px;
+            margin-top: 15px;
+        }
+
+body{
+    background: #FFFFFF;
+    font-size: 1.2em;
+    /*font-family: "Helvetica Neue", "Lucida Grande", "Segoe UI", Arial, Helvetica, Verdana, sans-serif;*/
+    margin: 5px;
+    padding: 0px;
+    /*color: #696969;*/
+    color:#333;
+}
+
+        #main {
+            min-width: 1000px;
+            width: 100%;
+        }
+
+        #topSection {
+            padding-left: 0px;
+        }
+        #leftFeature {
+            padding-right: 0px;
+        }
+        #mainFeature {
+            padding-left: 0px;
+        }
+        #main {
+            padding-left: 0px;
+        }

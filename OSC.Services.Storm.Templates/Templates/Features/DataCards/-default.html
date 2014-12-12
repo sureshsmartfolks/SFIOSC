@@ -1,0 +1,123 @@
+﻿<div class="feature" style="padding-right:15px;">
+    <div  id="gridFeatures" class="col-xs-12" style="height: 50px;">
+    <div class="col-xs-1 pull-right" ></div>
+    </div>
+    <div class="container col-xs-8 CardHolder">
+	<div id="CardHolderTemplate"></div>
+		
+        <!--TODO: Remove Additonal Markup JS-->
+<script src="http://localhost/ProjectManagementWeb/businessobjects.js" type="text/javascript"></script>		
+
+<!--    <table class="col-xs-10 gridFooter">
+					<tr>
+						<td align="left">
+							<select name="ddlResultsPerPage" id="ddlResultsPerPage">
+	                            <option value="6">6 Results</option>
+	                            <option selected="selected" value="12">12 Results</option>
+	                            <option value="18">18 Results</option>
+	                            <option value="24">24 Results</option>
+                            </select>
+						</td>
+						<td align="right">
+							<input type="submit" name="btnFirstPage" value="First Page" onclick="return false;" id="btnFirstPage" class="actionButton" style="height:26px;">
+							<input type="submit" name="btnPrevPage" value="&lt;" onclick="return false;" id="btnPrevPage" class="actionButton" style="height:26px;width:30px;">
+							<span id="lbCurrentPage">1/145</span>
+							<input type="submit" name="btnNextPage" value="&gt;" onclick="return false;" id="btnNextPage" class="actionButton" style="height:26px;width:30px;">
+							<input type="submit" name="btnLastPage" value="Last Page" onclick="return false;" id="btnLastPage" class="actionButton" style="height:26px;">
+						</td>
+					</tr>
+    </table>-->
+
+<!--        <div>
+            <div class="row">
+                <div class="col-xs-4">
+                    moo2
+							<select name="ddlResultsPerPage" id="ddlResultsPerPage">
+	                            <option value="6">6 Results</option>
+	                            <option selected="selected" value="12">12 Results</option>
+	                            <option value="18">18 Results</option>
+	                            <option value="24">24 Results</option>
+                            </select>
+                </div>
+
+                    <div class="col-xs-4 pagination">
+                        <li><a href="#">&laquo;</a></li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">&raquo;</a></li>
+                        moo
+                    </div>
+            </div>
+        </div>-->
+
+    </div>
+    </div>
+    <div title="Message" id="divMessage" style="text-align:center; vertical-align:middle; display:none;"></div>
+<div id="divFeatureModal" style="text-align:center; vertical-align:middle; display:none;"></div>
+
+<!-- JS RENDER TEMPLATES -->
+
+<script id="ProjectCard" type="text/x-jsrender">
+<!--        <div id="card_{{>ProjectID}}" class="card col-xs-11">
+                     <h3 class="card-heading simple">{{>Title}}</h3>
+                     <div class="card-body">
+                         <p><h4>Source Language:</h4> {{>SourceLanguage.Name}} </br>
+                             <h4>Target Languages: </h4> 
+                             {{for TargetLanguages}}
+                                {{>Name}}
+                             {{/for}}
+                         </p>
+
+                     </div>
+                     <div class="card-comments">
+                        <div class="comments-collapse-toggle">
+                           <a href="#" class="collapsed"></a>
+                        </div>
+                     </div>
+        </div>-->
+
+    <!-- OLD  ^^^-->
+
+        <div id="card_{{>ProjectID}}" class="panel panel-primary">
+            <!-- PROJECT ID in the HRef -->
+
+            <div class="" style="background-color:skyblue;"><span style="margin-left:5px; text-decoration:underline; font-size:x-large"><a href="expanded2.html?id={{>projectID}}">{{>Title}}</a></span></div>
+            <div class="row">
+
+                <!-- add status here -->
+                <div class="col-xs-2"><span style="margin-left:20px; font-size:1.5em;">PENDING</span></div> 
+                <!-- add PM / client here -->
+                <div class="col-xs-4 pull-right"><span style="font-size:large;">The Monarch<br>Dr. Venture</span> </div>
+            </div>
+            <div class="row">
+                <!-- add Cost here -->
+                    <div id="cost" class="col-xs-4 pull-right"><h3>$TE,HCO.ST</h3></div>
+                </div>
+            <div class="row">
+                <!-- add #docs and #recs (approved) tag here -->
+                <div style="font-size:larger;" class="label label-primary col-xs-offset-1 col-xs-4">Documents   <span class="badge">1222</span></div>
+                <div style="font-size:larger;" class="label label-primary col-xs-offset-2 col-xs-4">Resources   <span class="badge">1222 / 7</span></div>
+       </div>
+
+    <!-- OLD \/\/-->
+ <!--            <h3 class="card-heading simple">{{>Title}}</h3>
+                     <div class="card-body">
+                         <p><h4>Source Language:</h4> {{>SourceLanguage.Name}} </br>
+                             <h4>Target Languages: </h4> 
+                             {{for TargetLanguages}}
+                                {{>Name}}
+                             {{/for}}
+                         </p>
+
+                     </div>
+                     <div class="card-comments">
+                        <div class="comments-collapse-toggle">
+                           <a href="#" class="collapsed"></a>
+                        </div>
+                     </div>-->
+        </div>
+
+</script>

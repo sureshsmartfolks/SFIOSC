@@ -1,0 +1,21 @@
+D:\STORMSFI-master\OSC.ProjectManagement.BusinessObjects\bin\Debug\OSC.ProjectManagement.BusinessObjects.dll
+D:\STORMSFI-master\OSC.ProjectManagement.BusinessObjects\bin\Debug\OSC.ProjectManagement.BusinessObjects.pdb
+D:\STORMSFI-master\OSC.ProjectManagement.BusinessObjects\bin\Debug\OSC.BusinessObjects.FileTransfer.dll
+D:\STORMSFI-master\OSC.ProjectManagement.BusinessObjects\bin\Debug\OSC.BusinessObjects.FileTransfer.pdb
+D:\STORMSFI-master\OSC.ProjectManagement.BusinessObjects\obj\Debug\OSC.ProjectManagement.BusinessObjects.csprojResolveAssemblyReference.cache
+D:\STORMSFI-master\OSC.ProjectManagement.BusinessObjects\obj\Debug\OSC.ProjectManagement.BusinessObjects.dll
+D:\STORMSFI-master\OSC.ProjectManagement.BusinessObjects\obj\Debug\OSC.ProjectManagement.BusinessObjects.pdb
+G:\PrabhakaranS\Smartflok\Project-storm\STORMSFI-master\OSC.ProjectManagement.BusinessObjects\bin\Debug\OSC.ProjectManagement.BusinessObjects.dll
+G:\PrabhakaranS\Smartflok\Project-storm\STORMSFI-master\OSC.ProjectManagement.BusinessObjects\bin\Debug\OSC.ProjectManagement.BusinessObjects.pdb
+G:\PrabhakaranS\Smartflok\Project-storm\STORMSFI-master\OSC.ProjectManagement.BusinessObjects\bin\Debug\OSC.BusinessObjects.FileTransfer.dll
+G:\PrabhakaranS\Smartflok\Project-storm\STORMSFI-master\OSC.ProjectManagement.BusinessObjects\bin\Debug\OSC.BusinessObjects.FileTransfer.pdb
+G:\PrabhakaranS\Smartflok\Project-storm\STORMSFI-master\OSC.ProjectManagement.BusinessObjects\obj\Debug\OSC.ProjectManagement.BusinessObjects.csprojResolveAssemblyReference.cache
+G:\PrabhakaranS\Smartflok\Project-storm\STORMSFI-master\OSC.ProjectManagement.BusinessObjects\obj\Debug\OSC.ProjectManagement.BusinessObjects.dll
+G:\PrabhakaranS\Smartflok\Project-storm\STORMSFI-master\OSC.ProjectManagement.BusinessObjects\obj\Debug\OSC.ProjectManagement.BusinessObjects.pdb
+D:\Prabhakaran\Backup code\dec12\STORMSFI-master\OSC.ProjectManagement.BusinessObjects\bin\Debug\OSC.ProjectManagement.BusinessObjects.dll
+D:\Prabhakaran\Backup code\dec12\STORMSFI-master\OSC.ProjectManagement.BusinessObjects\bin\Debug\OSC.ProjectManagement.BusinessObjects.pdb
+D:\Prabhakaran\Backup code\dec12\STORMSFI-master\OSC.ProjectManagement.BusinessObjects\bin\Debug\OSC.BusinessObjects.FileTransfer.dll
+D:\Prabhakaran\Backup code\dec12\STORMSFI-master\OSC.ProjectManagement.BusinessObjects\bin\Debug\OSC.BusinessObjects.FileTransfer.pdb
+D:\Prabhakaran\Backup code\dec12\STORMSFI-master\OSC.ProjectManagement.BusinessObjects\obj\Debug\OSC.ProjectManagement.BusinessObjects.csprojResolveAssemblyReference.cache
+D:\Prabhakaran\Backup code\dec12\STORMSFI-master\OSC.ProjectManagement.BusinessObjects\obj\Debug\OSC.ProjectManagement.BusinessObjects.dll
+D:\Prabhakaran\Backup code\dec12\STORMSFI-master\OSC.ProjectManagement.BusinessObjects\obj\Debug\OSC.ProjectManagement.BusinessObjects.pdb

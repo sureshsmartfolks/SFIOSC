@@ -1,0 +1,6 @@
+D:\STORMSFI-master\OCS.HelperObjects.FileTransfer\bin\Debug\OCS.HelperObjects.FileTransfer.dll
+D:\STORMSFI-master\OCS.HelperObjects.FileTransfer\bin\Debug\OCS.HelperObjects.FileTransfer.pdb
+D:\STORMSFI-master\OCS.HelperObjects.FileTransfer\bin\Debug\Newtonsoft.Json.dll
+D:\STORMSFI-master\OCS.HelperObjects.FileTransfer\obj\Debug\OCS.HelperObjects.FileTransfer.csprojResolveAssemblyReference.cache
+D:\STORMSFI-master\OCS.HelperObjects.FileTransfer\obj\Debug\OCS.HelperObjects.FileTransfer.dll
+D:\STORMSFI-master\OCS.HelperObjects.FileTransfer\obj\Debug\OCS.HelperObjects.FileTransfer.pdb

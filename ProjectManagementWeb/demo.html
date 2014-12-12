@@ -1,0 +1,564 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>STORM: Project Management Portal</title>
+    <!--no idea what this does.....-->
+    <!--<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />-->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
+    <link href="Styles/bootstrap.min.css" rel="stylesheet" />
+    <!--<script type="text/javascript" src="Scripts/jquery-1.7.2.min.js"></script>-->
+    <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
+    <script src="Scripts/jquery-1.11.1.min.js"></script>
+
+    <!--<script type="text/javascript" src="//code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+	<script type="text/javascript" src="Scripts/common.js"></script>
+    <script type="text/javascript" src="Scripts/Authenticate.js"></script>
+	<script type="text/javascript" src="Scripts/jquerydialog.js"></script>
+	<script type="text/javascript" src="Scripts/jquery.ui.effect.js"></script>
+	<script type="text/javascript" src="Scripts/jquery.ui.widget.js"></script>
+	<script type="text/javascript" src="Scripts/jquery.ui.position.js"></script>-->
+    <script type="text/javascript" src="Scripts/jsrender.js"></script>
+    <!--<script type="text/javascript" src="Scripts/jsviews.js"></script>
+	<script type="text/javascript" src="Scripts/modernizr.js"></script>-->
+    <script type="text/javascript" src="Scripts/json.js"></script>
+    <script type="text/javascript" src="Scripts/StormPMServiceObjects.js"></script>
+    <!--<script type="text/javascript" src="//localhost/api/proxies"></script>-->
+    <script src="businessObjects.js"></script>
+
+    <!-- <link href="Styles/css/vendor/normalize.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/css/styles.min.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/css/jplist-demo-pages.min.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/css/jplist-core.min.css" rel="stylesheet" type="text/css" />
+    <script src="Scripts/jplist/jplist-core.min.js"></script>
+    <script src="Scripts/jplist/jplist.views-control.min.js"></script>
+    <link href="Styles/css/jplist-views-control.min.css" rel="stylesheet" type="text/css" />-->
+    <link href="Styles/css/vendor/normalize.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/css/styles.min.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/css/jplist-demo-pages.min.css" rel="stylesheet" type="text/css" />
+    <!-- jQuery lib -->
+    <!--<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>-->
+    <!--<script src="Scripts/vendor/jquery-1.10.0.min.js"></script>-->
+    <!-- jPList js and css  -->
+    <link href="Styles/css/jplist-core.min.css" rel="stylesheet" type="text/css" />
+    <script src="Scripts/jplist/jplist-core.min.js"></script>
+    <!-- sort bundle -->
+    <script src="Scripts/jplist/jplist.sort-bundle.min.js"></script>
+    <!-- textbox filter control -->
+    <link href="Styles/css/jplist-textbox-control.min.css" rel="stylesheet" type="text/css" />
+    <script src="Scripts/jplist/jplist.textbox-control.min.js"></script>
+    <!-- jplist pagination bundle -->
+    <script src="Scripts/jplist/jplist.pagination-bundle.min.js"></script>
+    <link href="Styles/css/jplist-pagination-bundle.min.css" rel="stylesheet" type="text/css" />
+    <!-- jplist history bundle -->
+    <script src="Scripts/jplist/jplist.history-bundle.min.js"></script>
+    <link href="Styles/css/jplist-history-bundle.min.css" rel="stylesheet" type="text/css" />
+    <!-- jplist toggle bundle -->
+    <script src="Scripts/jplist/jplist.filter-toggle-bundle.min.js"></script>
+    <link href="Styles/css/jplist-filter-toggle-bundle.min.css" rel="stylesheet" type="text/css" />
+    <!-- jplist views control -->
+    <script src="Scripts/jplist/jplist.views-control.min.js"></script>
+    <link href="Styles/css/jplist-views-control.min.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+    <style>
+        body {
+            font-size: 1.2em;
+        }
+        /* default CSS */
+
+        div.hideSkiplink {
+            background-color: #00641e;
+            padding-left: 0;
+            padding-right: 0;
+            height: 35px;
+            z-index: 999;
+        }
+
+            div.hideSkiplink ul {
+                padding-left: 0px;
+            }
+
+        a {
+            text-decoration: none;
+        }
+        a:hover {
+    background: #00641e;
+    /*color: #fff;*/
+}
+        ul {
+            list-style: none;
+        }
+
+        p {
+            margin: 15px 0;
+        }
+
+        /*
+                LEVEL ONE
+            */
+        ul.dropdown {
+            position: relative;
+        }
+            /*ul.dropdown li                      { font-weight: bold; float: left; zoom: 1; background: #ccc; }*/
+            ul.dropdown li {
+                font-weight: bold;
+                float: left;
+
+                zoom: 1;
+                background: #00641e;
+            }
+
+            ul.dropdown a:hover {
+                color: #000;
+            }
+
+            ul.dropdown a:active {
+                color: #ffa500;
+            }
+
+            ul.dropdown li a {
+                display: block;
+                padding: 4px 8px;
+                border-right: 1px solid #333;
+                color: #fff;
+            }
+
+            ul.dropdown li:last-child a {
+                border-right: none;
+            }
+            /* Doesn't work in IE */
+            ul.dropdown li.hover,
+            ul.dropdown li:hover {
+                background: Silver;
+                color: black;
+                position: relative;
+            }
+
+                ul.dropdown li.hover a {
+                    color: black;
+                }
+
+
+            /*
+                LEVEL TWO
+            */
+            ul.dropdown ul {
+                width: 220px;
+                visibility: hidden;
+                position: absolute;
+                top: 100%;
+                left: 0;
+            }
+
+                ul.dropdown ul li {
+                    font-weight: normal;
+                    background: #00641e;
+                    color: #000;
+                    border-bottom: 1px solid #ccc;
+                    float: none;
+                }
+
+                    /* IE 6 & 7 Needs Inline Block */
+                    ul.dropdown ul li a {
+                        border-right: none;
+                        width: 100%;
+                        display: inline-block;
+                    }
+
+                /*
+                LEVEL THREE
+            */
+                ul.dropdown ul ul {
+                    left: 100%;
+                    top: 0;
+                }
+
+            ul.dropdown li:hover > ul {
+                visibility: visible;
+            }
+
+
+        .gridStyle {
+            display: none;
+        }
+
+        .buttonStyle {
+            width: 688px;
+        }
+
+        .buttonWidth {
+            width: 120px;
+        }
+
+        .textSelected {
+            background-color: White;
+        }
+
+        a:link {
+            color: black;
+        }
+
+        a:visited {
+            color: black;
+        }
+
+        a:active {
+            color: black;
+        }
+
+    </style>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <br />
+    <div id="main" class="container-fluid">
+        <div id="topSection" class="col-xs-12">
+            <div class="logo pull-left col-xs-4">
+                <img src="images/storm-logo-name-2.png" />
+            </div>
+            <div class="col-xs-4 pull-left" style="margin:30px 0px 0px 270px; width:500px; color:black; background-color:lemonchiffon;">
+                <a href="#" style="font-family:Aparajita; font-size:larger; font-weight:bold; color:steelblue;" onclick="this.click();">Inbox</a><br />
+                <a href="#" style="font-family:Aparajita; font-size:larger; font-weight:bold; color:steelblue;" onclick="this.click();">New Messages</a><br />
+                <a href="#" style="font-family:Aparajita; font-size:larger; font-weight:bold; color:steelblue;" onclick="this.click();">Archive</a>
+            </div>
+        </div>
+        <div class="hideSkiplink col-xs-12">
+            <ul class="dropdown pull-left">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu Generator</a></li>
+                <li><a href="#">Export</a></li>
+                <li><a href="#">Admin</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+
+
+        </div>
+        <div class="row">
+            <div id="leftFeature" class="col-xs-1">
+            </div>
+
+            <div id="mainFeature" class="col-xs-11">
+                
+                <div class="feature" style="padding-right: 15px;">
+                    <a href="expanded2.html"><img class="pull-left" src="Images/new-spec-icon.png" width="30px" border="0" height="30px" style="margin:28px 0 50px -113px;" /></a>
+                    <div style="float:left; margin:70px -10px 0px -92px">
+                            <label style="color:green;margin-left:-10px;"> Filters:</label><br/>
+                       <img src="Images/sort-down-icon_20.png"> <label style="color:green;"> Company:</label>
+                    </div>   <!--<div id="gridFeatures" class="col-xs-12" style="height: 50px;">
+                        <div class="col-xs-1 pull-right"></div>
+                    </div>-->
+                   <!-- <div class="container col-xs-8 CardHolder">-->
+                        <!--<div id="CardHolderTemplate"></div>-->
+                        <!--TODO: Remove Additonal Markup JS-->
+                        <!-- demo -->
+                        <div id="demo" class="box jplist" style="margin: 20px 0 50px -113px;">
+                            <!-- panel -->
+                            <!-- checkbox filters -->
+                            <div class="jplist-panel box panel-top" style="width: 1200px;">
+                                <div id="projectName" style="width:200px;float:left; margin:100px 0 0 0;"
+                                     class="jplist-group"
+                                     data-control-type="checkbox-group-filter"
+                                     data-control-action="filter"
+                                     data-control-name="themes">
+                                    <!--
+        <input
+           data-path=".architecture"
+           id="architecture"
+           type="checkbox"
+        />
+        <label for="architecture">Architecture</label>-->
+                                </div>
+                                <!-- back button button -->
+                                <!--	<button 
+				type="button" 
+				data-control-type="back-button" 
+				data-control-name="back-button" 
+				data-control-action="back-button">
+				<i class="fa fa-arrow-left"></i> Go Back
+			</button>-->
+
+                               
+
+                                
+                             
+
+                                <!-- filter by title -->
+                                <!--[if lt IE 10]>
+				<div class="jplist-label">Filter by Title:</div>
+				<![endif]-->
+                                <div class="text-filter-box" style="margin:10px 485px 0 22px;">
+
+                                    <!--<i class="fa fa-search  jplist-icon"></i>-->
+                                    
+                                    <input data-path=".title"
+                                           type="text"
+                                           value=""
+                                           placeholder="Filter by Title"
+                                           data-control-type="textbox"
+                                           data-control-name="title-filter"
+                                           data-control-action="filter" />
+                                </div>
+
+                                <!-- filter by description -->
+                                <!--[if lt IE 10]>
+				<div class="jplist-label">Filter by Description:</div>
+				<![endif]-->
+                                <!--     <div class="text-filter-box">
+									
+				<i class="fa fa-search  jplist-icon"></i>
+									
+				
+									
+				<input 
+					data-path=".desc" 
+					type="text" 
+					value="" 
+					placeholder="Filter by Description" 
+					data-control-type="textbox" 
+					data-control-name="desc-filter" 
+					data-control-action="filter"
+				/>	
+			</div>-->
+
+                                <!-- views -->
+                                <div
+                                    class="jplist-views"
+                                    data-control-type="views"
+                                    data-control-name="views"
+                                    data-control-action="views"
+                                    data-default="jplist-grid-view">
+
+                                    <!-- <button type="button" class="jplist-view jplist-list-view" data-type="jplist-list-view"></button>
+			   <button type="button" class="jplist-view jplist-grid-view" data-type="jplist-grid-view"></button>
+			   <button type="button" class="jplist-view jplist-thumbs-view" data-type="jplist-thumbs-view"></button>-->
+                                </div>
+
+                              
+                                <!-- sort dropdown -->
+                                <!-- {year}, {month}, {day}, {hour}, {min}, {sec} -->
+
+                                <div class="jplist-drop-down" style="margin:10px 108px 0 0"
+                                     data-control-type="sort-drop-down"
+                                     data-control-name="sort"
+                                     data-control-action="sort"
+                                     data-datetime-format="{month}/{day}/{year}">
+                                    <ul>
+                                        <li><span data-path="default">Sort by</span></li>
+                                        <li><span data-path=".title" data-order="asc" data-type="text">Project Title A-Z</span></li>
+                                        <li><span data-path=".title" data-order="desc" data-type="text">Project Title Z-A</span></li>
+                                        <li><span data-path=".desc" data-order="asc" data-type="text">Company A-Z</span></li>
+                                        <li><span data-path=".desc" data-order="desc" data-type="text">Company Z-A</span></li>
+                                        <!--<li><span data-path=".like" data-order="asc" data-type="number" data-default="true">Likes asc</span></li>
+            <li><span data-path=".like" data-order="desc" data-type="number">Likes desc</span></li>
+            <li><span data-path=".date" data-order="asc" data-type="datetime">Date asc</span></li>
+            <li><span data-path=".date" data-order="desc" data-type="datetime">Date desc</span></li>-->
+                                    </ul>
+                                </div>
+                                <!-- reset button -->
+                                <button type="button" style="background:green;color:white;border-color:green;"
+                                        class="jplist-reset-btn"
+                                        data-control-type="reset"
+                                        data-control-name="reset"
+                                        data-control-action="reset">
+                                    Clear &nbsp;<i class="fa fa-share"></i>
+                                </button>
+                                <!-- items per page dropdown -->
+                                <!--<div class="jplist-drop-down" style="margin:360px 0px 0 -567px"
+                                     data-control-type="items-per-page-drop-down"
+                                     data-control-name="paging"
+                                     data-control-action="paging">
+
+                                    <ul>
+                                        <li><span data-number="3">3 per page </span></li>
+                                        <li><span data-number="5">5 per page </span></li>
+                                        <li><span data-number="10" data-default="true">10 per page </span></li>
+                                        <li><span data-number="all">View All </span></li>
+                                    </ul>
+                                </div>-->
+                                <!-- pagination results -->
+                                <div class="jplist-label" style="margin:290px 25px 0 690px;"
+                                     data-type="Page {current} of {pages}"
+                                     data-control-type="pagination-info"
+                                     data-control-name="paging"
+                                     data-control-action="paging">
+                                </div>
+
+                                <!-- pagination control -->
+                                <div class="jplist-pagination" style="margin:280px 0 0 0"
+                                     data-control-type="pagination"
+                                     data-control-name="paging"
+                                     data-control-action="paging"
+                                     data-items-per-page="6">
+                                </div>
+			
+    </div>
+                            <script src="businessobjects.js" type="text/javascript"></script>
+                            <div id="projects" class="list box text-shadow">
+                            </div>
+
+                        </div>
+                    <!--</div>-->
+                    <div title="Message" id="divMessage" style="text-align: center; vertical-align: middle; display: none;"></div>
+                    <div id="divFeatureModal" style="text-align: center; vertical-align: middle; display: none;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- JS RENDER TEMPLATES -->
+    <script id="ProjectNameList" type="text/x-jsrender">
+        <div style="width:150px;float: right;">
+                <input data-path=".{{>name}}"
+                       id="{{>name}}"
+                       type="checkbox" 
+                      />&nbsp;&nbsp;&nbsp;<label style="color:green;font-size:small;margin-top:12px;" >{{>name}}</label>
+
+            <!--<div style="float:right;width:80px">
+                <label style="word-wrap:normal;word-break:inherit">{{>name}}</label></br>
+            </div>-->
+        </div>
+    </script>
+    <script id="ProjectCards" type="text/x-jsrender">
+   
+    <div id="card_{{>ProjectID}}" class="list-item box" style="margin-bottom: 20px;background-color: #fff;border: 1px solid;border-radius: 0px;
+                                                            box-shadow: 0 1px 1px rgba(0,0,0,.05);">
+        <!-- PROJECT ID in the HRef -->
+
+        <div class="" style="background-color: green;">
+            <span style="display: block; margin: 0px auto; text-align: center;  font-size: large;" class="title"><a href="expanded2.html?id={{>projectID}}" style="color:white;">{{>projectName}}</a></span>
+            <!--<span style="text-align: right; font-style: italic; font-size: x-large" class="col-xs-4 pull-right">{{>trackStatus}}</span>-->
+        </div>
+        <div class="row">
+            <!-- add status here -->
+            <div class="col-xs-6 pull-left" style="margin-left: 20px;">
+                <!-- <span style="margin-left:20px; font-size:1.5em;">{{>client.name}}<br /></span> -->
+                <span style="font-size: medium; font-weight:bold;" class="{{>client.name}}"/>
+                    {{>client.name}}<br />
+                   <!-- {{>client.phoneNumber}}<br />
+                    {{>client.email}}</span>-->
+            </div>
+    
+    <!-- <div class="row"> -->
+    <!-- add Cost here -->
+            <div id="cost" class="col-xs-4 pull-right" style="text-align: left; font-size:small; color:green; font-weight:bold; height:1em; font-family:Calibri; margin:0px 5px 0 0px;">Quote: $595.65</div>
+            <div id="cost" class="col-xs-4 pull-right" style="text-align: left; font-size:small; color:green; font-weight:bold; font-family:Calibri; margin:0px 5px 0 0px;">Cost: $493.00</div>
+            <!--<div id="cost" class="col-xs-4 pull-right" style="text-align: left; font-size:small; color:green; font-weight:bold;"></div>-->
+</div>
+        <div class="row">
+            <!-- add #docs and #recs (approved) tag here -->
+            <div style="font-size: larger;" class="label label-primary col-xs-offset-1 col-xs-4"><span class="badge" style="text-decoration: underline;"><a href="#">Documents ({{>totalDocs}} / {{>approvedDocs}})</a><label class="pull-right" style="margin:2px 0px 0px 90px; color:red; font-family:Calibri; font-size:x-small;">Due: 11/10/2014</label><br /><a href="#">Resources ({{>totalResources}})</a><label class="pull-right" style="margin:2px 0px 0px 125px; color:mediumseagreen; font-family:Calibri; font-size:x-small;">PM: {{>pmName}}</label></span></div>
+            <!--<div style="font-size: larger;" class="label label-primary col-xs-offset-2 col-xs-4">   <span class="badge" style="text-decoration: underline;"><a href="#">Resources {{>totalResources}}</a></span></div>-->
+            <!-- add PM here -->
+            <!--<div class="col-xs-4 pull-right" style="text-align: left; font-size:x-small;">PM: <span style="margin-right: 20px; font-size: x-small;">{{>pmName}}</span> </div>-->
+            <!-- </div> -->
+        </div>
+       
+    </div>
+  
+
+</script>
+
+    <script type="text/javascript">
+
+
+        pDTO = ProjectManagementRequest();
+
+        $(document).ready(getData);
+
+        // this needs to be.... functionafied... to search
+        m = location.search
+        mm = m.substr(1).split("&");
+        mm[0].var = mm[0].split("=")[0];
+        mm[0].val = mm[0].split("=")[1];
+        //  alert("first get data call");
+
+        if (mm[0].split("=")[0] == "id")
+            pDTO.projectID = mm[0].split("=")[1];
+
+
+        // alert("second get data call");
+
+        //var projectDocument = [];
+
+        //http://localhost:50833/api/projectManagement/
+        function getData() {
+            //urlCall = "https://localhost/projectmanagementweb/getallProjects/";
+            urlCall = "http://localhost:50833/api/projectManagement/getallProjects/";
+            $.ajax({
+                type: "GET",
+                url: urlCall,
+                data: "",
+                contenttype: "application.json;charset=UTF-8",
+                success: getSuccess,
+                error: getError
+
+            })
+        }
+
+        function getSuccess(msg, status, err) {
+
+            pDTO = msg;//.projects;
+
+            var names = [];
+            //get document and resources count
+            for (var m = 0; m < pDTO.projects.length; m++) {
+                pDTO.projects[m].totalDocs = pDTO.projects[m].documents.length;
+                pDTO.projects[m].totalResources = pDTO.projects[m].resources.length;
+                pDTO.projects[m].approvedDocs = 0;
+                //alert(pDTO.projects[m].client.name);
+                names.push(pDTO.projects[m].client.name);
+                for (var m2 = 0; m2 < pDTO.projects[m].documents.length; m2++)
+                    if (pDTO.projects[m].documents[m2].status)
+                        pDTO.projects[m].approvedDocs++;
+
+
+                //get the name of the PM resources
+                pDTO.projects[m].pmName = "";
+                for (var x = 0; x < pDTO.projects[m].resources.length; x++) {
+                    if (pDTO.projects[m].resources[x].type == 0) {
+                        pDTO.projects[m].pmName = pDTO.projects[m].resources[x].firstName + " " + pDTO.projects[m].resources[x].lastName;
+                       
+                    }
+                }
+
+                if (pDTO.projects[m].pmName == "")
+                    pDTO.projects[m].pmName = "none assigned?";
+
+            }
+            var uniqueNames = [];
+            var uniqueNamesArray = [];
+            
+            $.each(names, function (i, el) {
+                if ($.inArray(el, uniqueNames) === -1) {
+                    uniqueNames.push(el);
+                    uniqueNamesArray.push({
+                        name: el
+                    });
+                }
+            });
+            //alert(uniqueNames.length);
+            $("#projects").html(
+                $("#ProjectCards").render(pDTO.projects));
+            $("#projectName").html(
+               $("#ProjectNameList").render(uniqueNamesArray));
+            getjplist();
+        }
+
+        function getError(msg, status, err) {
+            alert(msg.message);
+        }
+
+
+</script>
+    <script>
+        function getjplist() {
+            $('document').ready(function () {
+                $('#demo').jplist({
+                    itemsBox: '.list'
+                    , itemPath: '.list-item'
+                    , panelPath: '.jplist-panel'
+                });
+            });
+        }
+
+	</script>
+</body>
+</html>

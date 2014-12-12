@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Storm</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
+
+    <script type="text/javascript" src="Scripts/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="//code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+	<script type="text/javascript" src="Scripts/common.js"></script>
+    <script type="text/javascript" src="Scripts/Authenticate.js"></script>
+	<script type="text/javascript" src="Scripts/jquerydialog.js"></script>
+	<script type="text/javascript" src="Scripts/jquery.ui.effect.js"></script>
+	<script type="text/javascript" src="Scripts/jquery.ui.widget.js"></script>
+	<script type="text/javascript" src="Scripts/jquery.ui.position.js"></script>
+	<script type="text/javascript" src="Scripts/jsrender.js"></script>
+	<script type="text/javascript" src="Scripts/modernizr.js"></script>
+	<script type="text/javascript" src="Scripts/json.js"></script>
+	<script type="text/javascript" src="Scripts/StormPMServiceObjects.js"></script>
+    <script type="text/javascript" src="//localhost/ProjectManagement-API/api/proxies"></script>
+    <script type="text/javascript">
+
+        function getFeature(featureName) {
+            var featureHTML = "";
+            $.ajax({
+                type: "GET",
+                headers: { 'Authorization': 'Bearer ' + readCookie(authCookieName) },
+                url: MasterTemplateUrl + "/RetrieveTemplate?templateName=" + featureName,
+                async: false,
+                success: function (msg, status) { featureHTML = msg; },
+                error: function (msg, status) {
+                    displayMessage("Template Load Failed!", "Red");
+                }
+            });
+
+            return featureHTML;
+        };
+
+        checkAuth();
+
+        $(document).ready(function () {
+            $("body").append(getFeature("Index"));
+        });
+
+    </script>
+</head>
+<body>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+</body>
+</html>

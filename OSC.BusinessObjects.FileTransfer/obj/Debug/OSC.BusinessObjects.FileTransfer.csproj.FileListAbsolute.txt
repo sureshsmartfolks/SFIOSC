@@ -1,0 +1,4 @@
+D:\STORMSFI-master\OSC.BusinessObjects.FileTransfer\bin\Debug\OSC.BusinessObjects.FileTransfer.dll
+D:\STORMSFI-master\OSC.BusinessObjects.FileTransfer\bin\Debug\OSC.BusinessObjects.FileTransfer.pdb
+D:\STORMSFI-master\OSC.BusinessObjects.FileTransfer\obj\Debug\OSC.BusinessObjects.FileTransfer.dll
+D:\STORMSFI-master\OSC.BusinessObjects.FileTransfer\obj\Debug\OSC.BusinessObjects.FileTransfer.pdb

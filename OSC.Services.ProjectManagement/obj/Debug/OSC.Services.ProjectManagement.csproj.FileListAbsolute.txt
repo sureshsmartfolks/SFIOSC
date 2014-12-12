@@ -1,0 +1,119 @@
+D:\STORMSFI-master\OSC.Services.ProjectManagement\obj\Debug\OSC.Services.ProjectManagement.csprojResolveAssemblyReference.cache
+D:\STORMSFI-master\OSC.Services.ProjectManagement\bin\ProjectManagement-API.dll.config
+D:\STORMSFI-master\OSC.Services.ProjectManagement\bin\ProjectManagement-API.dll
+D:\STORMSFI-master\OSC.Services.ProjectManagement\bin\ProjectManagement-API.pdb
+D:\STORMSFI-master\OSC.Services.ProjectManagement\bin\JwtAuthForWebAPI.dll
+D:\STORMSFI-master\OSC.Services.ProjectManagement\bin\log4net.dll
+D:\STORMSFI-master\OSC.Services.ProjectManagement\bin\Microsoft.Web.Infrastructure.dll
+D:\STORMSFI-master\OSC.Services.ProjectManagement\bin\Newtonsoft.Json.dll
+D:\STORMSFI-master\OSC.Services.ProjectManagement\bin\OSC.ProjectManagement.BusinessObjects.dll
+D:\STORMSFI-master\OSC.Services.ProjectManagement\bin\ProxyApi.dll
+D:\STORMSFI-master\OSC.Services.ProjectManagement\bin\ResourceManager.dll
+D:\STORMSFI-master\OSC.Services.ProjectManagement\bin\System.IdentityModel.Tokens.Jwt.dll
+D:\STORMSFI-master\OSC.Services.ProjectManagement\bin\System.Net.Http.Formatting.dll
+D:\STORMSFI-master\OSC.Services.ProjectManagement\bin\System.Web.Cors.dll
+D:\STORMSFI-master\OSC.Services.ProjectManagement\bin\System.Web.Helpers.dll
+D:\STORMSFI-master\OSC.Services.ProjectManagement\bin\System.Web.Http.Cors.dll
+D:\STORMSFI-master\OSC.Services.ProjectManagement\bin\System.Web.Http.dll
+D:\STORMSFI-master\OSC.Services.ProjectManagement\bin\System.Web.Http.WebHost.dll
+D:\STORMSFI-master\OSC.Services.ProjectManagement\bin\System.Web.Mvc.dll
+D:\STORMSFI-master\OSC.Services.ProjectManagement\bin\System.Web.Razor.dll
+D:\STORMSFI-master\OSC.Services.ProjectManagement\bin\System.Web.WebPages.Deployment.dll
+D:\STORMSFI-master\OSC.Services.ProjectManagement\bin\System.Web.WebPages.dll
+D:\STORMSFI-master\OSC.Services.ProjectManagement\bin\System.Web.WebPages.Razor.dll
+D:\STORMSFI-master\OSC.Services.ProjectManagement\bin\OSC.ProjectManagement.BusinessObjects.pdb
+D:\STORMSFI-master\OSC.Services.ProjectManagement\bin\ResourceManager.pdb
+D:\STORMSFI-master\OSC.Services.ProjectManagement\bin\log4net.xml
+D:\STORMSFI-master\OSC.Services.ProjectManagement\bin\Newtonsoft.Json.xml
+D:\STORMSFI-master\OSC.Services.ProjectManagement\bin\System.IdentityModel.Tokens.Jwt.xml
+D:\STORMSFI-master\OSC.Services.ProjectManagement\bin\System.Net.Http.Formatting.xml
+D:\STORMSFI-master\OSC.Services.ProjectManagement\bin\System.Web.Helpers.xml
+D:\STORMSFI-master\OSC.Services.ProjectManagement\bin\System.Web.Http.xml
+D:\STORMSFI-master\OSC.Services.ProjectManagement\bin\System.Web.Http.Cors.xml
+D:\STORMSFI-master\OSC.Services.ProjectManagement\bin\System.Web.Http.WebHost.xml
+D:\STORMSFI-master\OSC.Services.ProjectManagement\bin\System.Web.Mvc.xml
+D:\STORMSFI-master\OSC.Services.ProjectManagement\bin\System.Web.Razor.xml
+D:\STORMSFI-master\OSC.Services.ProjectManagement\bin\System.Web.WebPages.xml
+D:\STORMSFI-master\OSC.Services.ProjectManagement\bin\System.Web.WebPages.Deployment.xml
+D:\STORMSFI-master\OSC.Services.ProjectManagement\bin\System.Web.WebPages.Razor.xml
+D:\STORMSFI-master\OSC.Services.ProjectManagement\obj\Debug\ProjectManagement-API.dll
+D:\STORMSFI-master\OSC.Services.ProjectManagement\obj\Debug\ProjectManagement-API.pdb
+G:\PrabhakaranS\Smartflok\Project-storm\STORMSFI-master\OSC.Services.ProjectManagement\bin\ProjectManagement-API.dll
+G:\PrabhakaranS\Smartflok\Project-storm\STORMSFI-master\OSC.Services.ProjectManagement\bin\ProjectManagement-API.pdb
+G:\PrabhakaranS\Smartflok\Project-storm\STORMSFI-master\OSC.Services.ProjectManagement\bin\JwtAuthForWebAPI.dll
+G:\PrabhakaranS\Smartflok\Project-storm\STORMSFI-master\OSC.Services.ProjectManagement\bin\log4net.dll
+G:\PrabhakaranS\Smartflok\Project-storm\STORMSFI-master\OSC.Services.ProjectManagement\bin\Microsoft.Web.Infrastructure.dll
+G:\PrabhakaranS\Smartflok\Project-storm\STORMSFI-master\OSC.Services.ProjectManagement\bin\Newtonsoft.Json.dll
+G:\PrabhakaranS\Smartflok\Project-storm\STORMSFI-master\OSC.Services.ProjectManagement\bin\OSC.ProjectManagement.BusinessObjects.dll
+G:\PrabhakaranS\Smartflok\Project-storm\STORMSFI-master\OSC.Services.ProjectManagement\bin\ProxyApi.dll
+G:\PrabhakaranS\Smartflok\Project-storm\STORMSFI-master\OSC.Services.ProjectManagement\bin\ResourceManager.dll
+G:\PrabhakaranS\Smartflok\Project-storm\STORMSFI-master\OSC.Services.ProjectManagement\bin\System.IdentityModel.Tokens.Jwt.dll
+G:\PrabhakaranS\Smartflok\Project-storm\STORMSFI-master\OSC.Services.ProjectManagement\bin\System.Net.Http.Formatting.dll
+G:\PrabhakaranS\Smartflok\Project-storm\STORMSFI-master\OSC.Services.ProjectManagement\bin\System.Web.Cors.dll
+G:\PrabhakaranS\Smartflok\Project-storm\STORMSFI-master\OSC.Services.ProjectManagement\bin\System.Web.Helpers.dll
+G:\PrabhakaranS\Smartflok\Project-storm\STORMSFI-master\OSC.Services.ProjectManagement\bin\System.Web.Http.Cors.dll
+G:\PrabhakaranS\Smartflok\Project-storm\STORMSFI-master\OSC.Services.ProjectManagement\bin\System.Web.Http.dll
+G:\PrabhakaranS\Smartflok\Project-storm\STORMSFI-master\OSC.Services.ProjectManagement\bin\System.Web.Http.WebHost.dll
+G:\PrabhakaranS\Smartflok\Project-storm\STORMSFI-master\OSC.Services.ProjectManagement\bin\System.Web.Mvc.dll
+G:\PrabhakaranS\Smartflok\Project-storm\STORMSFI-master\OSC.Services.ProjectManagement\bin\System.Web.Razor.dll
+G:\PrabhakaranS\Smartflok\Project-storm\STORMSFI-master\OSC.Services.ProjectManagement\bin\System.Web.WebPages.Deployment.dll
+G:\PrabhakaranS\Smartflok\Project-storm\STORMSFI-master\OSC.Services.ProjectManagement\bin\System.Web.WebPages.dll
+G:\PrabhakaranS\Smartflok\Project-storm\STORMSFI-master\OSC.Services.ProjectManagement\bin\System.Web.WebPages.Razor.dll
+G:\PrabhakaranS\Smartflok\Project-storm\STORMSFI-master\OSC.Services.ProjectManagement\bin\OSC.ProjectManagement.BusinessObjects.pdb
+G:\PrabhakaranS\Smartflok\Project-storm\STORMSFI-master\OSC.Services.ProjectManagement\bin\ResourceManager.pdb
+G:\PrabhakaranS\Smartflok\Project-storm\STORMSFI-master\OSC.Services.ProjectManagement\bin\log4net.xml
+G:\PrabhakaranS\Smartflok\Project-storm\STORMSFI-master\OSC.Services.ProjectManagement\bin\Newtonsoft.Json.xml
+G:\PrabhakaranS\Smartflok\Project-storm\STORMSFI-master\OSC.Services.ProjectManagement\bin\System.IdentityModel.Tokens.Jwt.xml
+G:\PrabhakaranS\Smartflok\Project-storm\STORMSFI-master\OSC.Services.ProjectManagement\bin\System.Net.Http.Formatting.xml
+G:\PrabhakaranS\Smartflok\Project-storm\STORMSFI-master\OSC.Services.ProjectManagement\bin\System.Web.Helpers.xml
+G:\PrabhakaranS\Smartflok\Project-storm\STORMSFI-master\OSC.Services.ProjectManagement\bin\System.Web.Http.xml
+G:\PrabhakaranS\Smartflok\Project-storm\STORMSFI-master\OSC.Services.ProjectManagement\bin\System.Web.Http.Cors.xml
+G:\PrabhakaranS\Smartflok\Project-storm\STORMSFI-master\OSC.Services.ProjectManagement\bin\System.Web.Http.WebHost.xml
+G:\PrabhakaranS\Smartflok\Project-storm\STORMSFI-master\OSC.Services.ProjectManagement\bin\System.Web.Mvc.xml
+G:\PrabhakaranS\Smartflok\Project-storm\STORMSFI-master\OSC.Services.ProjectManagement\bin\System.Web.Razor.xml
+G:\PrabhakaranS\Smartflok\Project-storm\STORMSFI-master\OSC.Services.ProjectManagement\bin\System.Web.WebPages.xml
+G:\PrabhakaranS\Smartflok\Project-storm\STORMSFI-master\OSC.Services.ProjectManagement\bin\System.Web.WebPages.Deployment.xml
+G:\PrabhakaranS\Smartflok\Project-storm\STORMSFI-master\OSC.Services.ProjectManagement\bin\System.Web.WebPages.Razor.xml
+G:\PrabhakaranS\Smartflok\Project-storm\STORMSFI-master\OSC.Services.ProjectManagement\obj\Debug\OSC.Services.ProjectManagement.csprojResolveAssemblyReference.cache
+G:\PrabhakaranS\Smartflok\Project-storm\STORMSFI-master\OSC.Services.ProjectManagement\obj\Debug\ProjectManagement-API.dll
+G:\PrabhakaranS\Smartflok\Project-storm\STORMSFI-master\OSC.Services.ProjectManagement\obj\Debug\ProjectManagement-API.pdb
+D:\Prabhakaran\Backup code\dec12\STORMSFI-master\OSC.Services.ProjectManagement\bin\ProjectManagement-API.dll.config
+D:\Prabhakaran\Backup code\dec12\STORMSFI-master\OSC.Services.ProjectManagement\bin\ProjectManagement-API.dll
+D:\Prabhakaran\Backup code\dec12\STORMSFI-master\OSC.Services.ProjectManagement\bin\ProjectManagement-API.pdb
+D:\Prabhakaran\Backup code\dec12\STORMSFI-master\OSC.Services.ProjectManagement\bin\JwtAuthForWebAPI.dll
+D:\Prabhakaran\Backup code\dec12\STORMSFI-master\OSC.Services.ProjectManagement\bin\log4net.dll
+D:\Prabhakaran\Backup code\dec12\STORMSFI-master\OSC.Services.ProjectManagement\bin\Microsoft.Web.Infrastructure.dll
+D:\Prabhakaran\Backup code\dec12\STORMSFI-master\OSC.Services.ProjectManagement\bin\Newtonsoft.Json.dll
+D:\Prabhakaran\Backup code\dec12\STORMSFI-master\OSC.Services.ProjectManagement\bin\OSC.ProjectManagement.BusinessObjects.dll
+D:\Prabhakaran\Backup code\dec12\STORMSFI-master\OSC.Services.ProjectManagement\bin\ProxyApi.dll
+D:\Prabhakaran\Backup code\dec12\STORMSFI-master\OSC.Services.ProjectManagement\bin\ResourceManager.dll
+D:\Prabhakaran\Backup code\dec12\STORMSFI-master\OSC.Services.ProjectManagement\bin\System.IdentityModel.Tokens.Jwt.dll
+D:\Prabhakaran\Backup code\dec12\STORMSFI-master\OSC.Services.ProjectManagement\bin\System.Net.Http.Formatting.dll
+D:\Prabhakaran\Backup code\dec12\STORMSFI-master\OSC.Services.ProjectManagement\bin\System.Web.Cors.dll
+D:\Prabhakaran\Backup code\dec12\STORMSFI-master\OSC.Services.ProjectManagement\bin\System.Web.Helpers.dll
+D:\Prabhakaran\Backup code\dec12\STORMSFI-master\OSC.Services.ProjectManagement\bin\System.Web.Http.Cors.dll
+D:\Prabhakaran\Backup code\dec12\STORMSFI-master\OSC.Services.ProjectManagement\bin\System.Web.Http.dll
+D:\Prabhakaran\Backup code\dec12\STORMSFI-master\OSC.Services.ProjectManagement\bin\System.Web.Http.WebHost.dll
+D:\Prabhakaran\Backup code\dec12\STORMSFI-master\OSC.Services.ProjectManagement\bin\System.Web.Mvc.dll
+D:\Prabhakaran\Backup code\dec12\STORMSFI-master\OSC.Services.ProjectManagement\bin\System.Web.Razor.dll
+D:\Prabhakaran\Backup code\dec12\STORMSFI-master\OSC.Services.ProjectManagement\bin\System.Web.WebPages.Deployment.dll
+D:\Prabhakaran\Backup code\dec12\STORMSFI-master\OSC.Services.ProjectManagement\bin\System.Web.WebPages.dll
+D:\Prabhakaran\Backup code\dec12\STORMSFI-master\OSC.Services.ProjectManagement\bin\System.Web.WebPages.Razor.dll
+D:\Prabhakaran\Backup code\dec12\STORMSFI-master\OSC.Services.ProjectManagement\bin\OSC.ProjectManagement.BusinessObjects.pdb
+D:\Prabhakaran\Backup code\dec12\STORMSFI-master\OSC.Services.ProjectManagement\bin\ResourceManager.pdb
+D:\Prabhakaran\Backup code\dec12\STORMSFI-master\OSC.Services.ProjectManagement\bin\log4net.xml
+D:\Prabhakaran\Backup code\dec12\STORMSFI-master\OSC.Services.ProjectManagement\bin\Newtonsoft.Json.xml
+D:\Prabhakaran\Backup code\dec12\STORMSFI-master\OSC.Services.ProjectManagement\bin\System.IdentityModel.Tokens.Jwt.xml
+D:\Prabhakaran\Backup code\dec12\STORMSFI-master\OSC.Services.ProjectManagement\bin\System.Net.Http.Formatting.xml
+D:\Prabhakaran\Backup code\dec12\STORMSFI-master\OSC.Services.ProjectManagement\bin\System.Web.Helpers.xml
+D:\Prabhakaran\Backup code\dec12\STORMSFI-master\OSC.Services.ProjectManagement\bin\System.Web.Http.xml
+D:\Prabhakaran\Backup code\dec12\STORMSFI-master\OSC.Services.ProjectManagement\bin\System.Web.Http.Cors.xml
+D:\Prabhakaran\Backup code\dec12\STORMSFI-master\OSC.Services.ProjectManagement\bin\System.Web.Http.WebHost.xml
+D:\Prabhakaran\Backup code\dec12\STORMSFI-master\OSC.Services.ProjectManagement\bin\System.Web.Mvc.xml
+D:\Prabhakaran\Backup code\dec12\STORMSFI-master\OSC.Services.ProjectManagement\bin\System.Web.Razor.xml
+D:\Prabhakaran\Backup code\dec12\STORMSFI-master\OSC.Services.ProjectManagement\bin\System.Web.WebPages.xml
+D:\Prabhakaran\Backup code\dec12\STORMSFI-master\OSC.Services.ProjectManagement\bin\System.Web.WebPages.Deployment.xml
+D:\Prabhakaran\Backup code\dec12\STORMSFI-master\OSC.Services.ProjectManagement\bin\System.Web.WebPages.Razor.xml
+D:\Prabhakaran\Backup code\dec12\STORMSFI-master\OSC.Services.ProjectManagement\obj\Debug\OSC.Services.ProjectManagement.csprojResolveAssemblyReference.cache
+D:\Prabhakaran\Backup code\dec12\STORMSFI-master\OSC.Services.ProjectManagement\obj\Debug\ProjectManagement-API.dll
+D:\Prabhakaran\Backup code\dec12\STORMSFI-master\OSC.Services.ProjectManagement\obj\Debug\ProjectManagement-API.pdb

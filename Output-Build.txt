@@ -1,0 +1,13 @@
+﻿1>------ Skipped Build: Project: OSC.BusinessObjects.FileTransfer, Configuration: Debug Any CPU ------
+1>Project not selected to build for this solution configuration 
+2>------ Skipped Build: Project: ResourceManagerWeb, Configuration: Debug Any CPU ------
+2>Project not selected to build for this solution configuration 
+3>------ Skipped Build: Project: OCS.HelperObjects.FileTransfer, Configuration: Debug Any CPU ------
+3>Project not selected to build for this solution configuration 
+4>------ Build started: Project: ProjectManagementWeb, Configuration: Debug Any CPU ------
+5>------ Skipped Build: Project: OSC.Services.FileTransfer, Configuration: Debug Any CPU ------
+5>Project not selected to build for this solution configuration 
+6>------ Skipped Build: Project: OSC.Services.Trados, Configuration: Debug Any CPU ------
+6>Project not selected to build for this solution configuration 
+4>  ProjectManagementWeb -> D:\Prabhakaran\Backup code\dec12\STORMSFI-master\ProjectManagementWeb\bin\ProjectManagementWeb.dll
+========== Build: 1 succeeded, 0 failed, 4 up-to-date, 5 skipped ==========
