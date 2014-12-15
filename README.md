@@ -18,4 +18,4 @@ Ex: http://localhost:50824/demo.html
 	JavaScript: STORMSFI-master/Web/ProjectManagement/Scripts/jplist & vendor Folder.
 	StyleSheet: STORMSFI-master/Web/ProjectManagement/Styles/css & vendor Folder.
 	HTML: STORMSFI-master/Web/ProjectManagement/demo.html & list.html.
-11. For database config run the dev_storm script file.
+11. For database config run the script file or restore Storm backup in your server and rename to Dev_Storm. 
